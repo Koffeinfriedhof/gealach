@@ -16,27 +16,28 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 1.2
-import QtQuick.Layouts 1.2
+import QtQuick.Layouts 1.3 as QtLayouts
+import QtQuick.Controls 1.4 as QtControls
 
 Item {
-    property alias cfg_dateFormat: dF.currentValue
+    property alias cfg_dateFormat: dF.currentDateFormatValue
     property alias cfg_dateFormatString: dFS.text
     property alias cfg_buttonTextVisible: btv.checked
 
     property real itemSpacing: 20
 
-    ColumnLayout {
+    QtLayouts.ColumnLayout {
+        QtLayouts.Layout.fillWidth: true
         spacing: itemSpacing
         Row {
             spacing: itemSpacing
-            Label {
+            QtControls.Label {
                 text: i18n("Choose Date Format")
             }
-            ComboBox {
+            QtControls.ComboBox {
                 id: dF
                 textRole: "name"
-                property int currentValue: 0
+                property int currentDateFormatValue: 0
                 model: ListModel {
                     id: limo
                     dynamicRoles: true
@@ -48,30 +49,34 @@ Item {
                         append({ "name": i18n("Custom Date"), "value": 99 } )
                     }
                 }
-                onCurrentIndexChanged: currentValue=limo.get(currentIndex).value
+                onCurrentIndexChanged: currentDateFormatValue=limo.get(currentIndex).value
             }
         }
         Row {
             spacing: itemSpacing
             visible: limo.get(dF.currentIndex).value==99
-            Label { text: i18n("Custom Date Format: "); height: dFS.height }
-            TextField {
-                id: dFS
+            QtLayouts.GridLayout {
+                columns: 2
+                QtControls.Label { text: i18n("Custom Date Format: "); height: dFS.height }
+                QtControls.Label {
+                    id: pv
+                    text: i18n("Preview: ")+Qt.formatDateTime(new Date(), dFS.text)
+                }
+
+                QtControls.TextField {
+                    QtLayouts.Layout.columnSpan: 2
+                    QtLayouts.Layout.fillWidth: true
+                    id: dFS
+                }
+
+                QtControls.Label { text: i18n("Available expressions:") }
+                QtControls.Label { text: "<a href=\"http://doc.qt.io/qt-5/qml-qtqml-date.html#details\">Date: Expression / Output</a>" }
             }
-            Label {
-                id: pv
-                text: i18n("Preview: ")+Qt.formatDateTime(new Date(), dFS.text)
-            }
-        }
-        Row {
-            visible: limo.get(dF.currentIndex).value==99
-            Label { text: i18n("Available expressions:") }
-            Label { text: "<a href=\"http://doc.qt.io/qt-5/qml-qtqml-date.html#details\">Date: Expression / Output</a>" }
         }
 
         Row {
             spacing: itemSpacing
-            CheckBox {
+            QtControls.CheckBox {
                 id: btv
                 text: i18n("Show Button Text")
                 checked: false

@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.3 as QtLayouts
+import QtQuick.Controls 1.4 as QtControls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -25,10 +25,10 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import "../code/phases.js" as Phases
 import "../code/lunacalc.js" as LunaCalc
 
-ColumnLayout {
+QtLayouts.ColumnLayout {
     id: fullRoot
-    Layout.minimumWidth: coll.width
-    Layout.minimumHeight: wolf.height + coll.height + btr.height + units.smallSpacing * 2
+    QtLayouts.Layout.minimumWidth: coll.width > btr.width ? coll.width : btr.width
+    QtLayouts.Layout.minimumHeight: wolf.height + coll.height + btr.height + units.smallSpacing * 2
 
     /** PROPERTIES **/
     property var displayPhase: LunaCalc.getTodayPhases()
@@ -43,21 +43,21 @@ ColumnLayout {
 
 
     /** ACTIONS **/
-    Action {
+    QtControls.Action {
         id: actionPrev
         text: buttonTextVisible ? i18n("Back") : ""
         shortcut: "Left"
         onTriggered: { displayPhase=LunaCalc.getPreviousPhases() }
         tooltip: i18n("Show previous moon phase. (Key:Left)")
     }
-    Action {
+    QtControls.Action {
         id: actionNext
         text: buttonTextVisible ? i18n("Next") : ""
         shortcut: "Right"
         onTriggered: { displayPhase=LunaCalc.getNextPhases() }
         tooltip: i18n("Show next moon phase. (Key:Right)")
     }
-    Action {
+    QtControls.Action {
         id: actionCurrent
         text: buttonTextVisible ? i18n("Current Phase") : ""
         shortcut: "Up"
@@ -86,12 +86,12 @@ ColumnLayout {
             source: plasmoid.file("data", "werewolf.png")
         }
     }
-    RowLayout {
+    QtLayouts.RowLayout {
         id: coll
 
         Column {
             spacing: units.smallSpacing
-            Layout.margins: spacing*2
+            QtLayouts.Layout.margins: spacing*2
             PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte0.svg") }
             PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte7.svg") }
             PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte14.svg") }
@@ -100,7 +100,7 @@ ColumnLayout {
         }
         Column {
             spacing: units.smallSpacing
-            Layout.margins: spacing*2
+            QtLayouts.Layout.margins: spacing*2
             PlasmaComponents.Label { text: formatDate(displayPhase[0]); color: primaryFontColor }
             PlasmaComponents.Label { text: formatDate(displayPhase[1]); color: primaryFontColor }
             PlasmaComponents.Label { text: formatDate(displayPhase[2]); color: primaryFontColor }
@@ -109,7 +109,7 @@ ColumnLayout {
         }
         Column {
             spacing: units.smallSpacing
-            Layout.margins: spacing*2
+            QtLayouts.Layout.margins: spacing*2
             PlasmaComponents.Label { text: phaseNames[0]; color: secondaryFontColor }
             PlasmaComponents.Label { text: phaseNames[1]; color: secondaryFontColor }
             PlasmaComponents.Label { text: phaseNames[2]; color: secondaryFontColor }
@@ -120,8 +120,9 @@ ColumnLayout {
     PlasmaComponents.ButtonRow {
         id: btr
 
-        Layout.alignment: Qt.AlignHCenter
-        Layout.margins: units.smallSpacing * 2
+        spacing: units.smallSpacing
+        QtLayouts.Layout.alignment: Qt.AlignHCenter
+        QtLayouts.Layout.margins: units.smallSpacing
 
         exclusive: false
 
@@ -137,5 +138,8 @@ ColumnLayout {
             iconSource: "draw-arrow-forward.png"
             action: actionNext
         }
+    }
+    Component.onCompleted: {
+        console.log("ppop:"+backgroundColor+"::"+primaryFontColor)
     }
 }

@@ -4,43 +4,42 @@
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <kcfgfile name=""/>
-    <group name="Icon">
+
+    <group name="General">
         <entry name="showBackground" type="Bool">
-            <label>Show Plasmoid Icon Background/label>
             <default>false</default>
         </entry>
+
         <entry name="hemisphere" type="Bool">
-            <label>hemisphere</label>
             <default>true</default>
         </entry>
-        <entry name="updateInterval" type="Int">
-            <label>Update interval</label>
+
+        <entry name="updateInterval" type="int">
             <default>3600000</default>
         </entry>
-    </group>
-    <group name="Popup">
-        <entry name="dateFormat" type="Int">
-            <label>Date Format</label>
+
+        <entry name="dateFormat" type="int">
             <default>0</default>
         </entry>
+
         <entry name="dateFormatString" type="String">
-            <label>Custom String For Date Format</label>
-            <default>"ddd, dd.MMM.yyyy H:mm"</default>
-        </entry>
-    </group>
-    <group name="Colors">
-        <entry name="backgroundColor" type="String">
-            <label>Custom Background Color</label>
-            <default>"#000000"</default>
-        </entry>
-        <entry name="primaryFontColor" type="String">
-            <label>Primary / Highlighted Font Color</label>
-            <default>"#3c83d0"</default>
-        </entry>
-        <entry name="secondaryFontColor" type="String">
-            <label>Secondary / Normal Font Color</label>
-            <default>"#e6e7e8"</default>
+            <default>ddd, dd.MMM.yyyy H:mm</default>
         </entry>
 
+        <entry name="buttonTextVisible" type="Bool">
+            <default>true</default>
+        </entry>
+
+        <entry name="backgroundColor" type="String">
+            <default>black</default>
+        </entry>
+
+        <entry name="primaryFontColor" type="String">
+            <default>lightsteelblue</default>
+        </entry>
+
+        <entry name="secondaryFontColor" type="String">
+            <default>white</default>
+        </entry>
     </group>
 </kcfg>

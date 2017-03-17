@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 1.2
-import QtQuick.Layouts 1.2
+import QtQuick.Layouts 1.3 as QtLayouts
+import QtQuick.Controls 1.4 as QtControls
 
 Item {
     id: root
@@ -27,21 +27,20 @@ Item {
 
     property real itemSpacing: 20
 
-    ColumnLayout {
+    QtLayouts.ColumnLayout {
         spacing: itemSpacing
-        GroupBox {
+        QtControls.GroupBox {
             title: i18n("Choose Hemisphere")
 
-            RowLayout {
+            QtLayouts.RowLayout {
                 spacing: itemSpacing
-                ExclusiveGroup { id: hemisphereGroup }
-                RadioButton {
+                QtControls.ExclusiveGroup { id: hemisphereGroup }
+                QtControls.RadioButton {
                     id: northern
                     text: i18n("Northern")
-                    checked: true
                     exclusiveGroup: hemisphereGroup
                 }
-                RadioButton {
+                QtControls.RadioButton {
                     text: i18n("Southern")
                     exclusiveGroup: hemisphereGroup
                 }
@@ -49,8 +48,8 @@ Item {
         }
         Row {
             spacing: itemSpacing
-            Label { text: i18n("Icon Update Interval")}
-            SpinBox {
+            QtControls.Label { text: i18n("Icon Update Interval")}
+            QtControls.SpinBox {
                 id: ival
                 property int interval: 0
                 value: 60
@@ -60,10 +59,9 @@ Item {
                 onValueChanged: interval=value*60*1000
             }
         }
-        CheckBox {
+        QtControls.CheckBox {
             id: bg
             text: i18n("Show Icon Background")
-            checked: false
         }
     }
 }

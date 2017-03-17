@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.3 as QtLayouts
+import QtQuick.Controls 1.4 as QtControls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -27,64 +27,64 @@ Item {
     property alias cfg_backgroundColor: _preview.color
     property alias cfg_primaryFontColor:    _pri.color
     property alias cfg_secondaryFontColor:  _sec.color
-    ColumnLayout {
+    QtLayouts.ColumnLayout {
         id: coll
         spacing: units.smallSpacing
 
         Row {
             spacing: units.smallSpacing
-            Label { text: i18n("Primary Font Color")}
-            TextField {
+            QtControls.Label { text: i18n("Primary Font Color")}
+            QtControls.TextField {
                 onTextChanged: _pri.color=text
-                Component.onCompleted: text=_pri.color
+                Component.onCompleted: text=cfg_primaryFontColor
             }
         }
 
         Row {
             spacing: units.smallSpacing
-            Label { text: i18n("Secondary Font Color")}
-            TextField {
+            QtControls.Label { text: i18n("Secondary Font Color")}
+            QtControls.TextField {
                 onTextChanged: _sec.color=text
-                Component.onCompleted: text=_sec.color
+                Component.onCompleted: text=cfg_secondaryFontColor
             }
         }
 
         Row {
             spacing: units.smallSpacing
-            Label { text: i18n("Background Color")}
-            TextField {
+            QtControls.Label { text: i18n("Background Color")}
+            QtControls.TextField {
                 onTextChanged: _preview.color=text
-                Component.onCompleted: text=_preview.color
+                 Component.onCompleted: text=cfg_backgroundColor
             }
         }
 
         Row {
             spacing: units.smallSpacing
-            Label { text: i18n("Preview")}
+            QtControls.Label { text: i18n("Preview")}
             Rectangle {
                 id: _preview
-                color: PlasmaCore.ColorScope.backgroundColor
                 height: _pri.height*3
                 width: _pri.width+_sec.width+units.smallSpacing*2
+
+                color: PlasmaCore.backgroundColor
+
                 Column {
-                    Text {
+                    QtControls.Label {
                         id: _pri;
-                        color: PlasmaCore.ColorScope.highlightColor;
                         text: i18n("Primary Font Color")
-
+                        color: PlasmaCore.highlightColor
                     }
-                    Text {
+                    QtControls.Label {
                         id: _sec;
-                        color: PlasmaCore.ColorScope.textColor;
                         text: i18n("Secondary Font Color")
-
+                        color: PlasmaCore.textColor
                     }
                 }
             }
         }
         Row {
             spacing: units.smallSpacing
-            Button {
+            QtControls.Button {
                 id: bt
                 text: i18n("Show/Hide Explanation")
                 checkable: true

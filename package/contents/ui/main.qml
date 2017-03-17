@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.3 as QtLayouts
+import QtQuick.Controls 1.4 as QtControls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -32,16 +32,16 @@ Item {
 
     /** CONFIGURATION **/
     //General
-    property bool showBackground: Plasmoid.configuration.showBackground //? Plasmoid.configuration.showBackground : false
-    property bool hemisphere: Plasmoid.configuration.hemisphere //? Plasmoid.configuration.hemisphere : true
-    property int dateFormat: Plasmoid.configuration.dateFormat //? Plasmoid.configuration.dateFormat : 0
-    property string dateFormatString: Plasmoid.configuration.dateFormatString //? Plasmoid.configuration.dateFormatString :  "yyyy.MM.dd"
-    property bool buttonTextVisible: Plasmoid.configuration.buttonTextVisible //? Plasmoid.configuration.buttonTextVisible : false
-    property int updateInterval: Plasmoid.configuration.updateInterval //? Plasmoid.configuration.updateInterval : 3600000
+    property bool showBackground: Plasmoid.configuration.showBackground
+    property bool hemisphere: Plasmoid.configuration.hemisphere
+    property int dateFormat: Plasmoid.configuration.dateFormat
+    property string dateFormatString: Plasmoid.configuration.dateFormatString
+    property bool buttonTextVisible: Plasmoid.configuration.buttonTextVisible
+    property int updateInterval: Plasmoid.configuration.updateInterval
     //Colors
-    property string backgroundColor: Plasmoid.configuration.backgroundColor //== undefined ? PlasmaCore.ColorScope.backgroundColor : Plasmoid.configuration.backgroundColor
-    property string primaryFontColor: Plasmoid.configuration.primaryFontColor //== undefined ?  PlasmaCore.ColorScope.highlightColor : Plasmoid.configuration.primaryFontColor
-    property string secondaryFontColor: Plasmoid.configuration.secondaryFontColor //== undefined ? PlasmaCore.ColorScope.textColor : Plasmoid.configuration.secondaryFontColor
+    property string backgroundColor: Plasmoid.configuration.backgroundColor
+    property string primaryFontColor: Plasmoid.configuration.primaryFontColor
+    property string secondaryFontColor: Plasmoid.configuration.secondaryFontColor
     //
     property var phases: LunaCalc.reloadPhases()
     property var currentPhase: LunaCalc.getCurrentPhase()
@@ -89,8 +89,8 @@ Item {
 
     Plasmoid.fullRepresentation: Rectangle {
         id: iMjustHereForBackgroundColor
-        Layout.preferredWidth: fullRoot.Layout.minimumWidth + units.smallSpacing
-        Layout.preferredHeight: fullRoot.Layout.minimumHeight + units.smallSpacing
+        QtLayouts.Layout.preferredWidth: fullRoot.QtLayouts.Layout.minimumWidth + units.smallSpacing
+        QtLayouts.Layout.preferredHeight: fullRoot.QtLayouts.Layout.minimumHeight + units.smallSpacing
         color: backgroundColor
         PhasesPopup{
             id: fullRoot
@@ -105,6 +105,6 @@ Item {
         onTriggered: update()
     }
     Component.onCompleted: {
-        console.log("config:"+Plasmoid.configuration.hemisphere)
+        console.log("config:"+Plasmoid.configuration.backgroundColor)
     }
 }
