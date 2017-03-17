@@ -1,0 +1,6 @@
+version 0.1.1 (2017-03-18):
+ - added preview and link to available expressions in configuration - custom date
+ - added main.xml to configuration
+
+version 0.1.0 (2017-03-17):
+- initial release
