@@ -1,0 +1,9 @@
+#!/bin/bash
+if [[ $1 == --reinstall ]]; then
+    plasmapkg2 --remove package
+    sleep 1
+    plasmapkg2 --install package
+else
+    plasmapkg2 --upgrade package
+fi
+echo 
