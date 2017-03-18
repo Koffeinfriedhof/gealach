@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull
 if [[ $1 == --reinstall ]]; then
     plasmapkg2 --remove package
     sleep 1
