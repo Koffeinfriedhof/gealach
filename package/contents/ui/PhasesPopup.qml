@@ -120,7 +120,7 @@ QtLayouts.ColumnLayout {
     PlasmaComponents.ButtonRow {
         id: btr
 
-        spacing: units.smallSpacing
+        spacing: units.smallSpacing*3
         QtLayouts.Layout.alignment: Qt.AlignHCenter
         QtLayouts.Layout.margins: units.smallSpacing
 
