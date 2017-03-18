@@ -1,6 +1,11 @@
 version 0.1.1 (2017-03-18):
+ - added ColorChooser, changed Layout in configuration
+ - color changed in main.xml
+ - switched item spacing from fixed 20 to dynamic value
  - added preview and link to available expressions in configuration - custom date
  - added main.xml to configuration
-
+ - added pointing mouse cursor to Hyperlinks
+ - fixed some text issues
+ - added "about"-page
 version 0.1.0 (2017-03-17):
 - initial release

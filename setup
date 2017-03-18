@@ -1,0 +1,27 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+    ./"${0##*/}" --help
+fi
+
+for i in "$@"
+do
+case $i in
+    -i|--install)
+	plasmapkg2 -i package
+    ;;
+    -u|--update)
+	git pull
+    	plasmapkg2 -u package
+    ;;
+    -r|--remove)
+	plasmapkg2 -r package
+    ;;
+    *)
+	echo "Usage:"
+	echo "-i|--install     :     (local) installation"
+	echo "-u|--update      :     update (local) installation"
+	echo "-r|--remove      :     remove (local) installation"
+	echo ""
+    ;;
+esac
+done;

@@ -45,7 +45,7 @@ QtLayouts.ColumnLayout {
     /** ACTIONS **/
     QtControls.Action {
         id: actionPrev
-        text: buttonTextVisible ? i18n("Back") : ""
+        text: buttonTextVisible ? i18n("Last") : ""
         shortcut: "Left"
         onTriggered: { displayPhase=LunaCalc.getPreviousPhases() }
         tooltip: i18n("Show previous moon phase. (Key:Left)")
@@ -62,7 +62,7 @@ QtLayouts.ColumnLayout {
         text: buttonTextVisible ? i18n("Current Phase") : ""
         shortcut: "Up"
         onTriggered: { displayPhase=LunaCalc.getTodayPhases() }
-        tooltip: i18n("Show previous phases. (Key:Up)")
+        tooltip: i18n("Show current phases. (Key:Up)")
     }
 
     /** CONTENT **/
@@ -71,7 +71,6 @@ QtLayouts.ColumnLayout {
 
         visible: currentPhase.number == 14
 
-        height: visible ? coll.height*0.75 : 0
         width: visible ? fullRoot.width : 0
 
         PlasmaComponents.Label {
@@ -85,6 +84,7 @@ QtLayouts.ColumnLayout {
             width: height
             source: plasmoid.file("data", "werewolf.png")
         }
+        Component.onCompleted: height=visible ? coll.height*0.75 : 0
     }
     QtLayouts.RowLayout {
         id: coll
@@ -101,28 +101,28 @@ QtLayouts.ColumnLayout {
         Column {
             spacing: units.smallSpacing
             QtLayouts.Layout.margins: spacing*2
-            PlasmaComponents.Label { text: formatDate(displayPhase[0]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[1]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[2]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[3]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[4]); color: primaryFontColor }
-        }
-        Column {
-            spacing: units.smallSpacing
-            QtLayouts.Layout.margins: spacing*2
             PlasmaComponents.Label { text: phaseNames[0]; color: secondaryFontColor }
             PlasmaComponents.Label { text: phaseNames[1]; color: secondaryFontColor }
             PlasmaComponents.Label { text: phaseNames[2]; color: secondaryFontColor }
             PlasmaComponents.Label { text: phaseNames[3]; color: secondaryFontColor }
             PlasmaComponents.Label { text: phaseNames[4]; color: secondaryFontColor }
         }
+        Column {
+            spacing: units.smallSpacing
+            QtLayouts.Layout.margins: spacing*2
+            PlasmaComponents.Label { text: formatDate(displayPhase[0]); color: primaryFontColor }
+            PlasmaComponents.Label { text: formatDate(displayPhase[1]); color: primaryFontColor }
+            PlasmaComponents.Label { text: formatDate(displayPhase[2]); color: primaryFontColor }
+            PlasmaComponents.Label { text: formatDate(displayPhase[3]); color: primaryFontColor }
+            PlasmaComponents.Label { text: formatDate(displayPhase[4]); color: primaryFontColor }
+        }
     }
+
     PlasmaComponents.ButtonRow {
         id: btr
 
         spacing: units.smallSpacing*3
         QtLayouts.Layout.alignment: Qt.AlignHCenter
-        QtLayouts.Layout.margins: units.smallSpacing
 
         exclusive: false
 
@@ -138,8 +138,5 @@ QtLayouts.ColumnLayout {
             iconSource: "draw-arrow-forward.png"
             action: actionNext
         }
-    }
-    Component.onCompleted: {
-        console.log("ppop:"+backgroundColor+"::"+primaryFontColor)
     }
 }

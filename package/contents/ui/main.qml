@@ -21,7 +21,6 @@ import QtQuick.Controls 1.4 as QtControls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
 
 import "../code/phases.js" as Phases
@@ -31,29 +30,33 @@ Item {
     id: root
 
     /** CONFIGURATION **/
-    //General
+    //ICON
     property bool showBackground: Plasmoid.configuration.showBackground
     property bool hemisphere: Plasmoid.configuration.hemisphere
+    property int updateInterval: Plasmoid.configuration.updateInterval
+
+    //POPUP
     property int dateFormat: Plasmoid.configuration.dateFormat
     property string dateFormatString: Plasmoid.configuration.dateFormatString
     property bool buttonTextVisible: Plasmoid.configuration.buttonTextVisible
-    property int updateInterval: Plasmoid.configuration.updateInterval
+
     //Colors
     property string backgroundColor: Plasmoid.configuration.backgroundColor
     property string primaryFontColor: Plasmoid.configuration.primaryFontColor
     property string secondaryFontColor: Plasmoid.configuration.secondaryFontColor
-    //
+
+    /** PROPERTIES **/
     property var phases: LunaCalc.reloadPhases()
     property var currentPhase: LunaCalc.getCurrentPhase()
     property var phaseNames:{ 0:i18n("New Moon"), 1:i18n("First Quarter"), 2:i18n("Full Moon"), 3:i18n("Last Quarter"), 4:i18n("Next New Moon")}
 
-    /** functions **/
+    /** FUNCTIONS **/
     function update() {
         currentPhase=LunaCalc.getCurrentPhase()
         phases=LunaCalc.reloadPhases()
     }
 
-    /** Plasmoid Details **/
+    /** PLASMOID DETAILS **/
     Plasmoid.backgroundHints: showBackground ? "DefaultBackground" : "NoBackground"
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
@@ -87,8 +90,9 @@ Item {
         }
     }
 
+    /** FULL **/
     Plasmoid.fullRepresentation: Rectangle {
-        id: iMjustHereForBackgroundColor
+        id: iAmJustHereForCustomBackgroundColor
         QtLayouts.Layout.preferredWidth: fullRoot.QtLayouts.Layout.minimumWidth + units.smallSpacing
         QtLayouts.Layout.preferredHeight: fullRoot.QtLayouts.Layout.minimumHeight + units.smallSpacing
         color: backgroundColor
@@ -103,8 +107,5 @@ Item {
         repeat: true
         running: true
         onTriggered: update()
-    }
-    Component.onCompleted: {
-        console.log("config:"+Plasmoid.configuration.backgroundColor)
     }
 }

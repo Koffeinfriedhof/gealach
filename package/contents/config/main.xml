@@ -35,11 +35,11 @@
         </entry>
 
         <entry name="primaryFontColor" type="String">
-            <default>lightsteelblue</default>
+            <default>#3c83d0</default>
         </entry>
 
         <entry name="secondaryFontColor" type="String">
-            <default>white</default>
+            <default>#e6e7e8</default>
         </entry>
     </group>
 </kcfg>

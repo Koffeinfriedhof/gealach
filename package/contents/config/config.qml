@@ -22,7 +22,7 @@ import org.kde.plasma.configuration 2.0
 ConfigModel {
     ConfigCategory {
          name: i18n("Icon")
-         icon: "configure"
+         icon: plasmoid.file("data", "luna-gskbyte14.svg");
          source: "cfgIcon.qml"
     }
     ConfigCategory {
@@ -32,7 +32,12 @@ ConfigModel {
     }
     ConfigCategory {
         name: i18n("Colors")
-        icon: "color-picker-black.png"
+        icon: "color-picker.png"
         source: "cfgColors.qml"
+    }
+    ConfigCategory {
+        name: i18n("About")
+        icon: "help-about.png"
+        source: "cfgAbout.qml"
     }
 }

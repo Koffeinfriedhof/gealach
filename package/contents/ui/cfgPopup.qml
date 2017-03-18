@@ -19,12 +19,14 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3 as QtLayouts
 import QtQuick.Controls 1.4 as QtControls
 
+import org.kde.plasma.core 2.0 as PlasmaCore
+
 Item {
     property alias cfg_dateFormat: dF.currentDateFormatValue
     property alias cfg_dateFormatString: dFS.text
     property alias cfg_buttonTextVisible: btv.checked
 
-    property real itemSpacing: 20
+    property real itemSpacing: units.largeSpacing
 
     QtLayouts.ColumnLayout {
         QtLayouts.Layout.fillWidth: true
@@ -70,7 +72,16 @@ Item {
                 }
 
                 QtControls.Label { text: i18n("Available expressions:") }
-                QtControls.Label { text: "<a href=\"http://doc.qt.io/qt-5/qml-qtqml-date.html#details\">Date: Expression / Output</a>" }
+                QtControls.Label {
+                    id: txt
+                    onLinkActivated: Qt.openUrlExternally(link)
+                    text: "<a href=\"http://doc.qt.io/qt-5/qml-qtqml-date.html#details\">Date: Expression / Output</a>"
+                    MouseArea { id: txtMA; anchors.fill: parent }
+                }
+                states: State {
+                    name: "cursor"; when: txt.hoveredLink.length > 0
+                    PropertyChanges { target: txtMA; cursorShape: Qt.PointingHandCursor; }
+                }
             }
         }
 

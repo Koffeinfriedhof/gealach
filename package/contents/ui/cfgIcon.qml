@@ -18,6 +18,7 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3 as QtLayouts
 import QtQuick.Controls 1.4 as QtControls
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
     id: root
@@ -25,7 +26,7 @@ Item {
     property alias cfg_hemisphere: northern.checked
     property alias cfg_updateInterval: ival.interval
 
-    property real itemSpacing: 20
+    property real itemSpacing: units.largeSpacing
 
     QtLayouts.ColumnLayout {
         spacing: itemSpacing
