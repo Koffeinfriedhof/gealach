@@ -4,15 +4,8 @@ Example: translate into german:
 
 Make sure your language is set to de_DE.UTF-8 or use
 >export LANG=de_DE.UTF-8<
-to set it.
-
-On first use you need to create the folder manually:
->mkdir -p de/LC_MESSAGES<
-and call
-./Messages.sh
-
-If there is already another translation present, just run
->./Messages.sh<
+to set it and call
+>./Messages.sh de<
 
 Edit the de/LC_MESSAGES/gealach.po file and set corresponding msgstr.
 

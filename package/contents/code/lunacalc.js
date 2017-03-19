@@ -151,7 +151,8 @@ function getCurrentPhase() // this function assumes that today is between phases
 		else if (daysFromLastNew == 1)
 			return {number: 1, text: i18n("Waxing Crescent"), subText: i18n("Yesterday was New Moon")};
 		else // assume that today >= last new moon
-			return {number: daysFromLastNew, text: i18n("Waxing Crescent"), subText: i18n("%1 days since New Moon", daysFromLastNew)};
+			return {number: daysFromLastNew, text: i18n("Waxing Crescent"),
+                subText: i18np("%1 day since New Moon", "%1 days since New Moon", daysFromLastNew)};
 	}
 
 	// if today >= third quarter, calculate day until next new moon
@@ -165,7 +166,8 @@ function getCurrentPhase() // this function assumes that today is between phases
 		else if (daysToNextNew == 1)
 			return {number: 27, text: i18n("Waning Crescent"), subText: i18n("Tomorrow is New Moon")};
 		else // assume that today <= next new moon
-			return {number: 28 - daysToNextNew, text: i18n("Waning Crescent"), subText: i18n("%1 days to New Moon", daysToNextNew)};
+			return {number: 28 - daysToNextNew, text: i18n("Waning Crescent"),
+                subText: i18np("%1 day to New Moon", "%1 days to New Moon", daysToNextNew)};
 	}
 
 	// in all other cases, calculate day from or until full moon
@@ -175,11 +177,13 @@ function getCurrentPhase() // this function assumes that today is between phases
 	else if (daysFromFullMoon == -1)
 		return {number: 13, text: i18n("Waxing Gibbous"), subText: i18n("Tomorrow is Full Moon")};
 	else if (daysFromFullMoon < -1)
-		return {number: 14 + daysFromFullMoon, text: i18n("Waxing Gibbous"), subText: i18n("%1 days to Full Moon", -daysFromFullMoon)};
+		return {number: 14 + daysFromFullMoon, text: i18n("Waxing Gibbous"),
+            subText: i18np("%1 day to Full Moon", "%1 days to Full Moon", -daysFromFullMoon)};
 	else if (daysFromFullMoon == 1)
 		return {number: 15, text: i18n("Waning Gibbous"), subText: i18n("Yesterday was Full Moon")};
 	else if (daysFromFullMoon > 1)
-		return {number: 14 + daysFromFullMoon, text: i18n("Waning Gibbous"), subText: i18n("%1 days since Full Moon", daysFromFullMoon)};
+		return {number: 14 + daysFromFullMoon, text: i18n("Waning Gibbous"),
+            subText: i18np("%1 day since Full Moon", "%1 days since Full Moon", daysFromFullMoon)};
 
 	// this should never happen:
 	console.log("We cannot count :-(");
