@@ -67,7 +67,7 @@ sed -e "s/FIRST AUTHOR <EMAIL@ADDRESS>, YEAR./$AUTHOR <$EMAIL>, $YEAR/g" -i "$PO
 sed -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: $VERSION/g" -i "$POT"
 
 #check existing translation files
-if [ $(find translations/ -type f -name *.po) ]; then
+if [ "$(find translations/ -type f -name *.po)" ]; then
     #sync available .po files into pot and compile them to mo
     for d in translations/*.po; do
         echo "Merging $d → $POT"
@@ -85,11 +85,11 @@ fi
 
 #if new language is requested, copy it:
 if ! [ -z "$REQUESTED_LANG" ]; then
-    if [ -f "translations/$NAME_$REQUESTED_LANG.po" ]; then
-        echo -e "\n$NAME_$REQUESTED_LANG.po is already created. Please edit it to fit your needs.\n"
+    if [ -f  translations/"$NAME"_"$REQUESTED_LANG".po ]; then
+        echo -e '\n' "$NAME"_"$REQUESTED_LANG".po is already created. Please edit it to fit your needs. '\n'
     else
-        echo "Copying $POT -> translations/$NAME_$REQUESTED_LANG.po ..."
-        cp "$POT" "translations/$NAME_$REQUESTED_LANG.po"
+        echo Copying "$POT" -> translations/"$NAME"_"$REQUESTED_LANG".po ...
+        cp "$POT" translations/"$NAME"_"$REQUESTED_LANG".po
     fi
 fi
 
