@@ -58,7 +58,7 @@ $EXTRACTRC ../ui/*.ui ../config/*.xml > ./rc.$SCRIPTEXT
 echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ./rc.$SCRIPTEXT
 echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ./rc.$SCRIPTEXT
 
-$XGETTEXT ../ui/*.qml rc.$SCRIPTEXT ../code/*.$SCRIPTEXT -L Java -o "$POT"
+$XGETTEXT ../*/*.qml rc.$SCRIPTEXT ../code/*.$SCRIPTEXT -L Java -o "$POT"
 sed -e 's/charset=CHARSET/charset=UTF-8/g' -i "$POT"
 sed -e "s/SOME DESCRIPTIVE TITLE./$NAME language translation file./g" -i "$POT"
 sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) $YEAR, $AUTHOR <$EMAIL>/g" -i "$POT"
