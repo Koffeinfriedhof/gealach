@@ -7,4 +7,6 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5Plasma REQUIRED)
 
+add_subdirectory(package/contents/locale/translations/)
+
 plasma_install_package(package org.kde.plasma.userbase.gealach)

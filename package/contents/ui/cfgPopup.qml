@@ -71,7 +71,9 @@ Item {
                     id: dFS
                 }
 
-                QtControls.Label { text: i18n("Available expressions:") }
+                QtControls.Label {
+                    // i18n: Expressions for custom date format
+                    text: i18n("Available expressions:") }
                 QtControls.Label {
                     id: txt
                     onLinkActivated: Qt.openUrlExternally(link)
@@ -89,6 +91,7 @@ Item {
             spacing: itemSpacing
             QtControls.CheckBox {
                 id: btv
+                // i18n: Button Text of prev|current|next moon phase
                 text: i18n("Show Button Text")
                 checked: false
             }

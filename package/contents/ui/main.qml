@@ -48,7 +48,9 @@ Item {
     /** PROPERTIES **/
     property var phases: LunaCalc.reloadPhases()
     property var currentPhase: LunaCalc.getCurrentPhase()
-    property var phaseNames:{ 0:i18n("New Moon"), 1:i18n("First Quarter"), 2:i18n("Full Moon"), 3:i18n("Last Quarter"), 4:i18n("Next New Moon")}
+    property var phaseNames:{
+        // i18n: Names of Moon Phases:
+        0:i18n("New Moon"), 1:i18n("First Quarter"), 2:i18n("Full Moon"), 3:i18n("Last Quarter"), 4:i18n("Next New Moon")}
 
     /** FUNCTIONS **/
     function update() {

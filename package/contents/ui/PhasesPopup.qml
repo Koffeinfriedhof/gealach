@@ -45,13 +45,15 @@ QtLayouts.ColumnLayout {
     /** ACTIONS **/
     QtControls.Action {
         id: actionPrev
-        text: buttonTextVisible ? i18n("Last") : ""
+        // i18n: Last/previous phase of the moon
+        text: buttonTextVisible ? i18n("Prev") : ""
         shortcut: "Left"
         onTriggered: { displayPhase=LunaCalc.getPreviousPhases() }
         tooltip: i18n("Show previous moon phase. (Key:Left)")
     }
     QtControls.Action {
         id: actionNext
+        // i18n: Next phase of the moon
         text: buttonTextVisible ? i18n("Next") : ""
         shortcut: "Right"
         onTriggered: { displayPhase=LunaCalc.getNextPhases() }
@@ -59,6 +61,7 @@ QtLayouts.ColumnLayout {
     }
     QtControls.Action {
         id: actionCurrent
+        // i18n: current phase of the moon
         text: buttonTextVisible ? i18n("Current Phase") : ""
         shortcut: "Up"
         onTriggered: { displayPhase=LunaCalc.getTodayPhases() }
@@ -75,6 +78,7 @@ QtLayouts.ColumnLayout {
 
         PlasmaComponents.Label {
             height: wolf.height
+            // i18n: shouting title on full-moon!
             text: i18n("TODAY IS FULL-MOON!");
             color: primaryFontColor
             font.pointSize: theme.defaultFont.pointSize*1.5
