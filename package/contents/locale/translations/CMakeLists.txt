@@ -1,4 +1,4 @@
-SET(catalogue "org.kde.plasma.userbase.gealach")
+SET(catalogue ${_FULL_PROJECT_NAME})
 
 FILE(GLOB MO_FILES *.mo)
 

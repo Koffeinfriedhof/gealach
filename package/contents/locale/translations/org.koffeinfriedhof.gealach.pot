@@ -1,6 +1,6 @@
-# org.kde.plasma.userbase.gealach language translation file.
+# gealach language translation file.
 # Copyright (C) 2017, koffeinfriedhof <koffeinfriedhof@gmail.com>
-# This file is distributed under the same license as the org.kde.plasma.userbase.gealach package.
+# This file is distributed under the same license as the gealach package.
 # koffeinfriedhof <koffeinfriedhof@gmail.com>, 2017
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-19 20:06+0100\n"
+"POT-Creation-Date: 2017-03-19 21:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"

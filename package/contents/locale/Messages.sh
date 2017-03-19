@@ -9,16 +9,13 @@
 # USE THIS ONLY FOR PLASMOIDS!!!
 #
 
-#if a language is passed as argument, check it:
+TRANS_DIR="translations" #relative path to folder containing mo-files.
+
+#if a language is passed as argument
+#TODO: check if its a correct one.
 REQUESTED_LANG=""
 if ! [[ $# -eq 0 ]] ; then
     REQUESTED_LANG=$1
-    if [ ! $(echo $LANG | cut -d_ -f1) = "$1" ]; then
-        echo "Example:  >$(basename $0) fr< for french language"
-        echo "Do not forget to export the language if changed, e.g."
-        echo ">export LANG=fr_FR.UTF-8"
-        exit 0
-    fi
 fi
 
 ########################
@@ -45,7 +42,7 @@ esac
 ### EXTRACTING TEXT ###
 #######################
 
-POT="translations/$NAME.pot"
+POT="$TRANS_DIR/$NAME.pot"
 YEAR=$(date +'%Y')
 
 XGETTEXT="xgettext --from-code=UTF-8 -kde -ci18n -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 \
@@ -67,9 +64,9 @@ sed -e "s/FIRST AUTHOR <EMAIL@ADDRESS>, YEAR./$AUTHOR <$EMAIL>, $YEAR/g" -i "$PO
 sed -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: $VERSION/g" -i "$POT"
 
 #check existing translation files
-if [ "$(find translations/ -type f -name *.po)" ]; then
+if [ "$(find "$TRANS_DIR"/ -type f -name *.po)" ]; then
     #sync available .po files into pot and compile them to mo
-    for d in translations/*.po; do
+    for d in "$TRANS_DIR"/*.po; do
         echo "Merging $d → $POT"
         msgmerge -U "$d" "$POT"
         echo -e "\nCompiling $d → ${d%.po}.mo"
@@ -85,11 +82,11 @@ fi
 
 #if new language is requested, copy it:
 if ! [ -z "$REQUESTED_LANG" ]; then
-    if [ -f  translations/"$NAME"_"$REQUESTED_LANG".po ]; then
+    if [ -f  "$TRANS_DIR"/"$NAME"_"$REQUESTED_LANG".po ]; then
         echo -e '\n' "$NAME"_"$REQUESTED_LANG".po is already created. Please edit it to fit your needs. '\n'
     else
-        echo Copying "$POT" -> translations/"$NAME"_"$REQUESTED_LANG".po ...
-        cp "$POT" translations/"$NAME"_"$REQUESTED_LANG".po
+        echo Copying "$POT" -> "$TRANS_DIR"/"$NAME"_"$REQUESTED_LANG".po ...
+        cp "$POT" "$TRANS_DIR"/"$NAME"_"$REQUESTED_LANG".po
     fi
 fi
 

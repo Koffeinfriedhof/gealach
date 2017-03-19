@@ -22,7 +22,7 @@ import org.kde.plasma.configuration 2.0
 ConfigModel {
     ConfigCategory {
          name: i18n("Icon")
-         icon: plasmoid.file("data", "luna-gskbyte14.svg");
+         icon: plasmoid.file("images", "luna-gskbyte14.svg");
          source: "cfgIcon.qml"
     }
     ConfigCategory {

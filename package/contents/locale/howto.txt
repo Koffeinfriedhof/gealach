@@ -3,21 +3,20 @@ How to translate:
 Example:
 translate into german:
 
-Make sure your language is set to de_DE.UTF-8 or use
->export LANG=de_DE.UTF-8<
-to set it and call
->./Messages.sh de<
+call:
+./Messages.sh de
 
-Running Messages.sh without an argument will create a template file called org.kde.plasma.userbase.gealach.pot in translation/.
+Running Messages.sh without an argument will create a template file called org.koffeinfriedhof.gealach.pot in translation-directory/.
 
-Edit the translations/org..gealach-de.po file and set corresponding msgstr.
+Edit the translation-directory/org.koffeinfriedhof.gealach-de.po file and set corresponding msgstr.
 
 After editing run ./Messages.sh without an argument. It will create a corresponding .mo-file
 
 To install files you have either to install it using cmake; make; sudo make install
-OR just copy your .mo-file to /usr/local/share/locale/de/LC_MESSAGES/_plasma_applet_org.kde.plasma.userbase.gealach.mo
+OR just copy your .mo-file to
+/usr/local/share/locale/de/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
 
 Other languages:
-You just have to replace all "de"'s in this document to view an example in your language. (but de_DE.UTF-8)
+You just have to replace all "de"'s in this document to view an example in your language.
 
 *** Do not forget to set your credits to be honored by all wolves howling to the moon! ***

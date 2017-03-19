@@ -86,7 +86,7 @@ QtLayouts.ColumnLayout {
         PlasmaCore.IconItem {
             height: wolf.height
             width: height
-            source: plasmoid.file("data", "werewolf.png")
+            source: plasmoid.file("images", "werewolf.png")
         }
         Component.onCompleted: height=visible ? coll.height*0.75 : 0
     }
@@ -96,11 +96,11 @@ QtLayouts.ColumnLayout {
         Column {
             spacing: units.smallSpacing
             QtLayouts.Layout.margins: spacing*2
-            PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte0.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte7.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte14.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte21.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("data", "luna-gskbyte0.svg") }
+            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
+            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte7.svg") }
+            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte14.svg") }
+            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte21.svg") }
+            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
         }
         Column {
             spacing: units.smallSpacing

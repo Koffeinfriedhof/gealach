@@ -74,7 +74,7 @@ Item {
 
             PlasmaCore.Svg {
                 id: lunaSvg
-                imagePath: plasmoid.file("data", "luna-gskbyte" + root.currentPhase.number + ".svg");
+                imagePath: plasmoid.file("images", "luna-gskbyte" + root.currentPhase.number + ".svg");
             }
 
             PlasmaCore.SvgItem {
