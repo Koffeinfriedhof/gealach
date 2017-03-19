@@ -1,6 +1,12 @@
 [Desktop Entry]
 Name=Gealach
-Comment=Display moon phases for your location
+Comment=Display moon phases for your location.
+Comment[ga]=céimeanna ghealach taispeáint ar do shuíomh.
+Comment[de]=Zeigen Sie Mondphasen für Ihren Standort an.
+Comment[fr]=Affichez les phases de lune pour votre emplacement.
+Comment[en]=Display moon phases for your location.
+Comment[it]=Visualizzazione le fasi lunari per la vostra posizione.
+Comment[es]=Muestra las fases lunares de tu ubicación.
 
 Icon=preferences-system-time
 Type=Service
