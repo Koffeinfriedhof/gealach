@@ -49,6 +49,7 @@ Item {
         }
         Row {
             spacing: itemSpacing
+            // i18n: the plasmoid icon seen on the desktop or in panel
             QtControls.Label { text: i18n("Icon Update Interval")}
             QtControls.SpinBox {
                 id: ival
@@ -62,6 +63,7 @@ Item {
         }
         QtControls.CheckBox {
             id: bg
+            // i18n: the plasmoid icon seen on the desktop or in panel
             text: i18n("Show Icon Background")
         }
     }

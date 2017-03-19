@@ -35,6 +35,7 @@ Item {
         property var current: _priField
         property string name: ""
 
+        // i18n: Please choose color, e.g. Primary Font Color
         title: i18n("Please choose %1").arg(name)
         onAccepted: {
             current.text=colorDialog.color
@@ -117,6 +118,7 @@ Item {
             }
         }
         QtControls.Button {
+            // i18n: button text to load colors of current theme
             text: i18n("Set Theme Colors")
             onClicked: {
                 _priField.text=PlasmaCore.ColorScope.highlightColor
@@ -127,6 +129,7 @@ Item {
         QtControls.Button {
             id: bt
             QtLayouts.Layout.columnSpan: 3
+            // i18n: Button to show/hide explanation if color codes, e.g. "red" or "#FF0000"
             text: i18n("Show/Hide Explanation")
             checkable: true
         }

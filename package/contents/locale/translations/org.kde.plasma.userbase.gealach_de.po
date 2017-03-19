@@ -1,0 +1,256 @@
+# org.kde.plasma.userbase.gealach language translation file.
+# Copyright (C) 2017, koffeinfriedhof <koffeinfriedhof@gmail.com>
+# This file is distributed under the same license as the org.kde.plasma.userbase.gealach package.
+# koffeinfriedhof <koffeinfriedhof@gmail.com>, 2017
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-19 16:21+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. i18n: Last/previous phase of the moon
+#: ../ui/PhasesPopup.qml:49
+msgid "Prev"
+msgstr "Vorherige"
+
+#: ../ui/PhasesPopup.qml:52
+msgid "Show previous moon phase. (Key:Left)"
+msgstr "Zeige vorherige Mondphase (Taste: Links)"
+
+#. i18n: Next phase of the moon
+#: ../ui/PhasesPopup.qml:57
+msgid "Next"
+msgstr "Nächste"
+
+#: ../ui/PhasesPopup.qml:60
+msgid "Show next moon phase. (Key:Right)"
+msgstr "Zeige nächste Mondphase (Taste: Rechts)"
+
+#. i18n: current phase of the moon
+#: ../ui/PhasesPopup.qml:65
+msgid "Current Phase"
+msgstr "Aktuelle Phase"
+
+#: ../ui/PhasesPopup.qml:68
+msgid "Show current phases. (Key:Up)"
+msgstr "Zeige aktuelle Mondphase (Taste: Hoch)"
+
+#. i18n: shouting title on full-moon!
+#: ../ui/PhasesPopup.qml:82
+msgid "TODAY IS FULL-MOON!"
+msgstr "HEUTE IST VOLLMOND!"
+
+#. i18n: Please choose color, e.g. Primary Font Color
+#: ../ui/cfgColors.qml:39
+msgid "Please choose %1"
+msgstr "Bitte wähle die %1"
+
+#: ../ui/cfgColors.qml:53 ../ui/cfgColors.qml:112
+msgid "Primary Font Color"
+msgstr "primäre Schriftfarbe"
+
+#: ../ui/cfgColors.qml:70 ../ui/cfgColors.qml:116
+msgid "Secondary Font Color"
+msgstr "sekundäre Schriftfarbe"
+
+#: ../ui/cfgColors.qml:86
+msgid "Background Color"
+msgstr "Hintergrundfarbe"
+
+#: ../ui/cfgColors.qml:102
+msgid "Preview"
+msgstr "Vorschau"
+
+#. i18n: button text to load colors of current theme
+#: ../ui/cfgColors.qml:122
+msgid "Set Theme Colors"
+msgstr "Setze Farbschema (Theme)"
+
+#. i18n: Button to show/hide explanation if color codes, e.g. "red" or "#FF0000"
+#: ../ui/cfgColors.qml:133
+msgid "Show/Hide Explanation"
+msgstr "Zeige/Verberge Erklärung"
+
+#: ../ui/cfgColors.qml:150
+msgid ""
+"Quote from <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QML Colors</a>: "
+"You may enter a color by a SVG color name, such as \"red\", \"green\" or "
+"\"lightsteelblue\" or by a hexadecimal triplet or quad in the form \"#RRGGBB"
+"\" and \"#AARRGGBB\" respectively. For example, the color red corresponds to "
+"a triplet of \"#FF0000\" and a slightly transparent blue to a quad of "
+"\"#800000FF\"."
+msgstr ""
+"Zitat von <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QML Colors</a>: "
+"Erlaubt sind SVG-Farbnamen wie \"red\", \"green\" oder\"lightsteelblue\" "
+"oder die Hexadezimaldarstellung als Triole oder Quartett in den Formen "
+"\"#RRGGBB\" und \"#AARRGGBB\". Beispiele: die Farbe rot entspricht der "
+"Triole \"#FF0000\" und ein leicht transparentes blau dem Quartett \"#800000FF"
+"\"."
+
+#: ../ui/cfgIcon.qml:34
+msgid "Choose Hemisphere"
+msgstr "Wähle Hemisphäre"
+
+#: ../ui/cfgIcon.qml:41
+msgid "Northern"
+msgstr "Nordhalbkugel"
+
+#: ../ui/cfgIcon.qml:45
+msgid "Southern"
+msgstr "Südhalbkugel"
+
+#. i18n: the plasmoid icon seen on the desktop or in panel
+#: ../ui/cfgIcon.qml:53
+msgid "Icon Update Interval"
+msgstr "Aktualisierungsintervall der Symboldarstellung"
+
+#: ../ui/cfgIcon.qml:60
+msgid " minutes"
+msgstr " Minuten"
+
+#. i18n: the plasmoid icon seen on the desktop or in panel
+#: ../ui/cfgIcon.qml:67
+msgid "Show Icon Background"
+msgstr "Zeige Hintergrund der Symboldarstellung"
+
+#: ../ui/cfgPopup.qml:37
+msgid "Choose Date Format"
+msgstr "Format des Datums einstellen"
+
+#: ../ui/cfgPopup.qml:47
+msgid "Text Date"
+msgstr "Standard"
+
+#: ../ui/cfgPopup.qml:48
+msgid "ISO Date"
+msgstr "ISO 8601"
+
+#: ../ui/cfgPopup.qml:49
+msgid "Short Date"
+msgstr "Kurz"
+
+#: ../ui/cfgPopup.qml:50
+msgid "Long Date"
+msgstr "Ausführlich"
+
+#: ../ui/cfgPopup.qml:51
+msgid "Custom Date"
+msgstr "Benutzerdefiniert"
+
+#: ../ui/cfgPopup.qml:62
+msgid "Custom Date Format: "
+msgstr "Benutzerdefiniertes Format"
+
+#: ../ui/cfgPopup.qml:65
+msgid "Preview: "
+msgstr "Vorschau"
+
+#. i18n: Expressions for custom date format
+#: ../ui/cfgPopup.qml:76
+msgid "Available expressions:"
+msgstr "Verfügbare Ausdrücke:"
+
+#. i18n: Button Text of prev|current|next moon phase
+#: ../ui/cfgPopup.qml:95
+msgid "Show Button Text"
+msgstr "Zeige Schaltflächentext"
+
+#. i18n: Names of Moon Phases:
+#: ../ui/main.qml:53 ../code/lunacalc.js:150 ../code/lunacalc.js:165
+msgid "New Moon"
+msgstr "Neumond"
+
+#: ../ui/main.qml:53 ../code/lunacalc.js:146
+msgid "First Quarter"
+msgstr "Erstes Viertel"
+
+#: ../ui/main.qml:53 ../code/lunacalc.js:176
+msgid "Full Moon"
+msgstr "Vollmond"
+
+#: ../ui/main.qml:53 ../code/lunacalc.js:161
+msgid "Last Quarter"
+msgstr "Letztes Viertel"
+
+#: ../ui/main.qml:53
+msgid "Next New Moon"
+msgstr "Nächster Neumond"
+
+#: rc.js:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Eure Namen"
+
+#: rc.js:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Eure Emailadressen"
+
+#: ../code/lunacalc.js:152 ../code/lunacalc.js:154
+msgid "Waxing Crescent"
+msgstr "Zunehmender Mond"
+
+#: ../code/lunacalc.js:152
+msgid "Yesterday was New Moon"
+msgstr "Gestern war Neumond"
+
+#: ../code/lunacalc.js:155
+msgid "%1 day since New Moon"
+msgid_plural "%1 days since New Moon"
+msgstr[0] "%1 Tag seit Neumond"
+msgstr[1] "%1 Tage seit Neumond"
+
+#: ../code/lunacalc.js:167 ../code/lunacalc.js:169
+msgid "Waning Crescent"
+msgstr "Abnehmender Mond"
+
+#: ../code/lunacalc.js:167
+msgid "Tomorrow is New Moon"
+msgstr "Morgen ist Neumond"
+
+#: ../code/lunacalc.js:170
+msgid "%1 day to New Moon"
+msgid_plural "%1 days to New Moon"
+msgstr[0] "%1 Tag bis Neumond"
+msgstr[1] "%1 Tage bis Neumond"
+
+#: ../code/lunacalc.js:178 ../code/lunacalc.js:180
+msgid "Waxing Gibbous"
+msgstr "Zunehmender Halbmond"
+
+#: ../code/lunacalc.js:178
+msgid "Tomorrow is Full Moon"
+msgstr "Morgen ist Vollmond"
+
+#: ../code/lunacalc.js:181
+msgid "%1 day to Full Moon"
+msgid_plural "%1 days to Full Moon"
+msgstr[0] "%1 Tag bis Vollmond"
+msgstr[1] "%1 Tage bis Vollmond"
+
+#: ../code/lunacalc.js:183 ../code/lunacalc.js:185
+msgid "Waning Gibbous"
+msgstr "Abnehmender Halbmond"
+
+#: ../code/lunacalc.js:183
+msgid "Yesterday was Full Moon"
+msgstr "Gestern war Vollmond"
+
+#: ../code/lunacalc.js:186
+msgid "%1 day since Full Moon"
+msgid_plural "%1 days since Full Moon"
+msgstr[0] "%1 Tag seit Vollmond"
+msgstr[1] "%1 Tage seit Vollmond"
+
+#~ msgid "Last"
+#~ msgstr "Vorherige"
