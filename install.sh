@@ -5,5 +5,3 @@ echo *** running command: "make"
 make
 echo *** running command: "sudo make install"
 sudo make install
-
-

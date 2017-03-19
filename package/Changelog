@@ -1,3 +1,5 @@
+version 0.1.2 (2017-03-19):
+ - prepare localisation: pluralized lunacalc.js with i18np
 version 0.1.1 (2017-03-18):
  - added ColorChooser, changed Layout in configuration
  - color changed in main.xml

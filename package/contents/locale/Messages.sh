@@ -4,6 +4,7 @@
 # under the GPLv2 or later
 # Modifications for QML plasmoids by:
 # Copyright (C) 2012 Glad Deschrijver <glad.deschrijver@gmail.com>
+# further modifications in 2017 by <koffeinfriedhof@gmail.com>
 
 # Go to script dir
 cd "${0%/*}"
