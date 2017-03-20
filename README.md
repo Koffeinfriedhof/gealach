@@ -20,10 +20,11 @@ System logic is the one delivered with "Luna II", another Plasma-Port of Luna QM
 *   <https://store.kde.org/p/1002036/>
 *
 * Werewolf picture: by Woofer - Created 2016-05-11 - Description: Color version of werewolf in front of a full moon.
-* https://openclipart.org/detail/248378/werewolf-and-moon-in-color
+* https://openclipart.org/detail/248378/werewolf-and-moon-in-color licensed unter CC0 Public Domain
 *
-* Wolf with Moon picture by Fractalbee - Created 2012-08-23 - Description: Wolf howling against the moon.
-* https://openclipart.org/detail/171859/wolf-with-moon
+* Moon in Hand - used as "screenshot.png":
+* https://pixabay.com/de/mond-planet-himmelsk%C3%B6rper-2134881/
+* by: https://pixabay.com/de/users/FunkyFocus-3900817/ licensed unter CC0 Public Domain
 
 License
 -------
