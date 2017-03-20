@@ -16,6 +16,15 @@ case $i in
     -r|--remove)
 	plasmapkg2 -r package
     ;;
+    -g|--global-install)
+    #cmake; make;
+    supkg=$(which sudo 2>/dev/null)
+    if [ $(id -u) -eq 0 ] || [ $supkg ]; then
+      $supkg make install
+    else
+      echo "Sorry, I could not find sudo package. You have to manually install: start 'make install' with apropriate rights."
+    fi
+    ;;
     *)
 	echo "Usage:"
 	echo "-i|--install     :     (local) installation"
