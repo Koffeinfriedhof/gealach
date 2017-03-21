@@ -96,3 +96,4 @@ fi
 ###############
 
 rm -f rc.$SCRIPTEXT
+find "$TRANS_DIR"/ -type f -name "*.po~" -exec rm {} \;
