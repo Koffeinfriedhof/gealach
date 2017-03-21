@@ -42,6 +42,7 @@ Item {
                     exclusiveGroup: hemisphereGroup
                 }
                 QtControls.RadioButton {
+                    id: southern
                     text: i18n("Southern")
                     exclusiveGroup: hemisphereGroup
                 }
@@ -67,4 +68,5 @@ Item {
             text: i18n("Show Icon Background")
         }
     }
+    Component.onCompleted: southern.checked=!northern.checked
 }

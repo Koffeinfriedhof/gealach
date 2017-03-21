@@ -97,9 +97,9 @@ QtLayouts.ColumnLayout {
             spacing: units.smallSpacing
             QtLayouts.Layout.margins: spacing*2
             PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte7.svg") }
+            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte7.svg"); rotation: hemisphere  ? 0 : 180 }
             PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte14.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte21.svg") }
+            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte21.svg"); rotation: hemisphere  ? 0 : 180 }
             PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
         }
         Column {
