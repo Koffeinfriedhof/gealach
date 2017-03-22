@@ -36,7 +36,7 @@ ConfigModel {
         source: "cfgColors.qml"
     }
     ConfigCategory {
-        name: i18n("About")
+        name: i18n("Credits")
         icon: "help-about.png"
         source: "cfgAbout.qml"
     }

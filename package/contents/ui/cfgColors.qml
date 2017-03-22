@@ -142,7 +142,7 @@ Item {
             anchors.top: coll.bottom
             width: parent.width*0.9
             wrapMode: Text.WordWrap
-            onLinkActivated: Qt.openUrlExternally(link)
+
             MouseArea {
                 id: txtMA
                 anchors.fill: parent
@@ -152,5 +152,6 @@ Item {
         states: State {
             name: "cursor"; when: txt.hoveredLink.length > 0
             PropertyChanges { target: txtMA; cursorShape: Qt.PointingHandCursor; }
+            PropertyChanges { target: txtMA; onClicked: Qt.openUrlExternally(txt.hoveredLink) }
         }
 }
