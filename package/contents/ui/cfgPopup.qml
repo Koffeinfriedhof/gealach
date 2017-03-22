@@ -76,13 +76,31 @@ Item {
                     text: i18n("Available expressions:") }
                 QtControls.Label {
                     id: txt
-                    onLinkActivated: Qt.openUrlExternally(link)
                     text: "<a href=\"http://doc.qt.io/qt-5/qml-qtqml-date.html#details\">Date: Expression / Output</a>"
-                    MouseArea { id: txtMA; anchors.fill: parent }
+                    MouseArea {
+                        id: txtMA
+                        anchors.fill: parent
+                    }
+                }
+
+                QtLayouts.RowLayout {
+                    QtLayouts.Layout.columnSpan: 2
+                    QtLayouts.Layout.fillWidth: true
+                    PlasmaCore.IconItem {
+                        source: "internet-web-browser.png"
+                        visible: linker.text.length
+                    }
+                    QtControls.Label {
+                        QtLayouts.Layout.alignment: Qt.AlignVCenter
+                        id: linker
+                        wrapMode: Text.WordWrap
+                    }
                 }
                 states: State {
                     name: "cursor"; when: txt.hoveredLink.length > 0
                     PropertyChanges { target: txtMA; cursorShape: Qt.PointingHandCursor; }
+                    PropertyChanges { target: txtMA; onClicked: Qt.openUrlExternally(txt.hoveredLink) }
+                    PropertyChanges { target: linker; text: txt.hoveredLink }
                 }
             }
         }

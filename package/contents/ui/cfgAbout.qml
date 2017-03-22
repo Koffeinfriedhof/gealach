@@ -19,6 +19,8 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3 as QtLayouts
 import QtQuick.Controls 1.4 as QtControls
 
+import org.kde.plasma.core 2.0 as PlasmaCore
+
 Item {
     Text {
         id: txt
@@ -33,12 +35,20 @@ Item {
         }
         text: "<br /><h3>This page is dedicated to the earlier maintainers and creators of Luna and Luna II. Thank you for sharing your work!</h3><br /><br /><a href=\"mailto:dxtwjb@gmail.com\">Bill Binder</a> for porting the Luna QML plasmoid from Plasma 4 to Plasma 5.<br /><br /><a href=\"mailto:glad.deschrijver@gmail.com\">Glad Deschrijver</a> for maintaining Luna QML 2011-2013<br /><br />The JavaScript code is based on the C++ code of the original Luna plasmoid in the KDE Plasma Workspace. This C++ code is licensed as follows:<br />Copyright 1996 <a href=\"mailto:chris@speakeasy.org\">Christopher Osburn</a><br />Copyright 1998,2000 <a href=\"mailto:coolo@kde.org\">Stephan Kulow</a><br />Copyright 2008 by <a href=\"mailto:davide.bettio@kdemail.net\">Davide Bettio</a><br />licensed under the GNU GPL version 2 or later.<br /><br />The luna images are extracted from the luna SVG file created by:<br />Copyright 2009 Jose Alcala (project manager), Dan Gerhards (moon artwork), Jeremy M. Todaro (shadows and layout)<br />(available at <a href=\"http://kde-look.org/content/show.php/luna.svgz+(full+SVG+image)?content=106013\">http://kde-look.org/content/show.php/luna.svgz+(full+SVG+image)?content=106013</a> original available at <a href=\"http://www.public-domain-photos.com/free-cliparts/science/astronomy/the_moon_dan_gerhards_01-5094.htm\">http://www.public-domain-photos.com/free-cliparts/science/astronomy/the_moon_dan_gerhards_01-5094.htm</a>) released in the public domain<br /><br />"
     }
-    QtControls.Label {
-        id: linker
+    QtLayouts.RowLayout {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-        wrapMode: Text.WordWrap
+
+        PlasmaCore.IconItem {
+            source: linker.text.substr(0,7) == "http://" ? "internet-web-browser.png" : "mail-message-new.png"
+            visible: linker.text.length
+        }
+        QtControls.Label {
+            QtLayouts.Layout.alignment: Qt.AlignVCenter
+            id: linker
+            wrapMode: Text.WordWrap
+        }
     }
     states: State {
         name: "cursor"; when: txt.hoveredLink.length > 0

@@ -149,9 +149,25 @@ Item {
             }
             text: i18n("Quote from <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QML Colors</a>: You may enter a color by a SVG color name, such as \"red\", \"green\" or \"lightsteelblue\" or by a hexadecimal triplet or quad in the form \"#RRGGBB\" and \"#AARRGGBB\" respectively. For example, the color red corresponds to a triplet of \"#FF0000\" and a slightly transparent blue to a quad of \"#800000FF\".")
         }
+        QtLayouts.RowLayout {
+            anchors.top: txt.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+
+            PlasmaCore.IconItem {
+                source: "internet-web-browser.png"
+                visible: linker.text.length
+            }
+            QtControls.Label {
+                QtLayouts.Layout.alignment: Qt.AlignVCenter
+                id: linker
+                wrapMode: Text.WordWrap
+            }
+        }
         states: State {
             name: "cursor"; when: txt.hoveredLink.length > 0
             PropertyChanges { target: txtMA; cursorShape: Qt.PointingHandCursor; }
             PropertyChanges { target: txtMA; onClicked: Qt.openUrlExternally(txt.hoveredLink) }
+            PropertyChanges { target: linker; text: txt.hoveredLink }
         }
 }
