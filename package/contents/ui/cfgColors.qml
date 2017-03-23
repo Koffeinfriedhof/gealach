@@ -29,7 +29,6 @@ Item {
     property alias cfg_primaryFontColor:    _pri.color
     property alias cfg_secondaryFontColor:  _sec.color
 
-    //Color dialog
     ColorDialog {
         id: colorDialog
         property var current: _priField
@@ -39,10 +38,6 @@ Item {
         title: i18n("Please choose %1").arg(name)
         onAccepted: {
             current.text=colorDialog.color
-            Qt.quit()
-        }
-        onRejected: {
-            Qt.quit()
         }
     }
 
