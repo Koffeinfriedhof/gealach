@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-21 20:00+0100\n"
+"POT-Creation-Date: 2017-03-23 21:49+0100\n"
 "PO-Revision-Date: 2017-03-19 19:34+0100\n"
 "Last-Translator: koffeinfriedhof <koffeinfriedhof@gmail.com>\n"
 "Language-Team: French <kde-i18n-fr@kde.org>\n"
@@ -67,37 +67,37 @@ msgid "TODAY IS FULL-MOON!"
 msgstr "AUJOURD'HUI EST PLEINE LUNE!"
 
 #. i18n: Please choose color, e.g. Primary Font Color
-#: ../ui/cfgColors.qml:39
+#: ../ui/cfgColors.qml:38
 msgid "Please choose %1"
 msgstr "Choisissez la couleur %1"
 
-#: ../ui/cfgColors.qml:53 ../ui/cfgColors.qml:112
+#: ../ui/cfgColors.qml:48 ../ui/cfgColors.qml:107
 msgid "Primary Font Color"
 msgstr "de police primaire"
 
-#: ../ui/cfgColors.qml:70 ../ui/cfgColors.qml:116
+#: ../ui/cfgColors.qml:65 ../ui/cfgColors.qml:111
 msgid "Secondary Font Color"
 msgstr "de police secondaire"
 
-#: ../ui/cfgColors.qml:86
+#: ../ui/cfgColors.qml:81
 msgid "Background Color"
 msgstr "d'arrière-plan"
 
-#: ../ui/cfgColors.qml:102
+#: ../ui/cfgColors.qml:97
 msgid "Preview"
 msgstr "Prévisualisation"
 
 #. i18n: button text to load colors of current theme
-#: ../ui/cfgColors.qml:122
+#: ../ui/cfgColors.qml:117
 msgid "Set Theme Colors"
 msgstr "Couleurs à thème"
 
 #. i18n: Button to show/hide explanation if color codes, e.g. "red" or "#FF0000"
-#: ../ui/cfgColors.qml:133
+#: ../ui/cfgColors.qml:128
 msgid "Show/Hide Explanation"
 msgstr "Afficher / Masquer Explication"
 
-#: ../ui/cfgColors.qml:150
+#: ../ui/cfgColors.qml:145
 msgid ""
 "Quote from <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QML Colors</a>: "
 "You may enter a color by a SVG color name, such as \"red\", \"green\" or "
@@ -169,7 +169,7 @@ msgstr "Date personalisé"
 
 #: ../ui/cfgPopup.qml:65
 msgid "Preview: "
-msgstr "Aperçu"
+msgstr "Prévisualisation: "
 
 #. i18n: Expressions for custom date format
 #: ../ui/cfgPopup.qml:76
@@ -177,7 +177,7 @@ msgid "Available expressions:"
 msgstr "Expressions disponibles:"
 
 #. i18n: Button Text of prev|current|next moon phase
-#: ../ui/cfgPopup.qml:95
+#: ../ui/cfgPopup.qml:113
 msgid "Show Button Text"
 msgstr "Afficher le texte de bouton"
 

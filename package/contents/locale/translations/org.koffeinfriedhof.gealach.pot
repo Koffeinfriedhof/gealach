@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1.4\n"
+"Project-Id-Version: 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-21 20:04+0100\n"
+"POT-Creation-Date: 2017-03-23 21:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,37 +67,37 @@ msgid "TODAY IS FULL-MOON!"
 msgstr ""
 
 #. i18n: Please choose color, e.g. Primary Font Color
-#: ../ui/cfgColors.qml:39
+#: ../ui/cfgColors.qml:38
 msgid "Please choose %1"
 msgstr ""
 
-#: ../ui/cfgColors.qml:53 ../ui/cfgColors.qml:112
+#: ../ui/cfgColors.qml:48 ../ui/cfgColors.qml:107
 msgid "Primary Font Color"
 msgstr ""
 
-#: ../ui/cfgColors.qml:70 ../ui/cfgColors.qml:116
+#: ../ui/cfgColors.qml:65 ../ui/cfgColors.qml:111
 msgid "Secondary Font Color"
 msgstr ""
 
-#: ../ui/cfgColors.qml:86
+#: ../ui/cfgColors.qml:81
 msgid "Background Color"
 msgstr ""
 
-#: ../ui/cfgColors.qml:102
+#: ../ui/cfgColors.qml:97
 msgid "Preview"
 msgstr ""
 
 #. i18n: button text to load colors of current theme
-#: ../ui/cfgColors.qml:122
+#: ../ui/cfgColors.qml:117
 msgid "Set Theme Colors"
 msgstr ""
 
 #. i18n: Button to show/hide explanation if color codes, e.g. "red" or "#FF0000"
-#: ../ui/cfgColors.qml:133
+#: ../ui/cfgColors.qml:128
 msgid "Show/Hide Explanation"
 msgstr ""
 
-#: ../ui/cfgColors.qml:150
+#: ../ui/cfgColors.qml:145
 msgid ""
 "Quote from <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QML Colors</a>: "
 "You may enter a color by a SVG color name, such as \"red\", \"green\" or "
@@ -171,7 +171,7 @@ msgid "Available expressions:"
 msgstr ""
 
 #. i18n: Button Text of prev|current|next moon phase
-#: ../ui/cfgPopup.qml:95
+#: ../ui/cfgPopup.qml:113
 msgid "Show Button Text"
 msgstr ""
 
