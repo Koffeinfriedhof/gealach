@@ -3,34 +3,58 @@ if [ $# -eq 0 ]; then
     ./"${0##*/}" --help
 fi
 
+function lFiles {
+    lText="Copying"
+    if [ "$1" == "r" ]; then lText="Removing"; fi
+
+    for file in package/contents/locale/translations/*.mo
+        do
+        LG=${file:(-5)}
+        LG=${LG:0:2}
+        echo "$lText language file for $LG"
+        if ! [ "$1" == "r" ]; then
+            mkdir -p ~/.local/usr/share/locale/$LG/LC_MESSAGES/
+            cp $file ~/.local/usr/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
+        else
+            rm ~/.local/usr/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
+        fi
+    done
+}
+
 for i in "$@"
 do
 case $i in
     -i|--install)
-	plasmapkg2 -i package
+        plasmapkg2 -i package
+        lFiles
     ;;
     -u|--update)
-	git pull
+        if [ -d .git ]; then git pull; fi
     	plasmapkg2 -u package
+    	lFiles
     ;;
     -r|--remove)
-	plasmapkg2 -r package
+        plasmapkg2 -r package
+        lFiles "r"
     ;;
     -g|--global-install)
-    #cmake; make;
-    supkg=$(which sudo 2>/dev/null)
-    if [ $(id -u) -eq 0 ] || [ $supkg ]; then
-      $supkg make install
-    else
-      echo "Sorry, I could not find sudo package. You have to manually install: start 'make install' with apropriate rights."
-    fi
+        cmake CMakeLists.txt && make
+        supkg=$(which sudo 2>/dev/null)
+        if [ $(id -u) -eq 0 ] || [ $supkg ]; then
+            $supkg make install
+        else
+            echo "Sorry, I could not find sudo package. You have to manually install: start 'make install' with apropriate rights."
+        fi
     ;;
     *)
-	echo "Usage:"
-	echo "-i|--install     :     (local) installation"
-	echo "-u|--update      :     update (local) installation"
-	echo "-r|--remove      :     remove (local) installation"
-	echo ""
+        echo "Usage:"
+        echo "-i|--install         :   (local) installation"
+        echo "-u|--update          :   update (local) installation"
+        echo "-r|--remove          :   remove (local) installation"
+        echo "-r -i                :   remove and install (reinstall)"
+        echo ""
+        echo "-g|--global-install  :   run cmake,make and make install"
+        echo ""
     ;;
 esac
 done;
