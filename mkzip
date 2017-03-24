@@ -1,5 +1,5 @@
 #!/bin/bash
 VERSION=$(grep "X-KDE-PluginInfo-Version" package/metadata.desktop | sed 's/.*=//')
 cd package
-zip ../gealach-$VERSION.zip *
+zip -r ../gealach-$VERSION.zip *
 cd ..
