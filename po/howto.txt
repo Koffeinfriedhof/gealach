@@ -6,9 +6,9 @@ translate into german:
 call:
 ./Messages.sh de
 
-Running Messages.sh without an argument will create a template file called org.koffeinfriedhof.gealach.pot in translation-directory/.
+Running Messages.sh without an argument will create a template file called org.koffeinfriedhof.gealach.pot.
 
-Edit the translation-directory/org.koffeinfriedhof.gealach-de.po file and set corresponding msgstr.
+Edit the plasma_applet_org.koffeinfriedhof.gealach-de.po file and set corresponding msgstr.
 
 After editing run ./Messages.sh without an argument. It will create a corresponding .mo-file
 

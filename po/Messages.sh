@@ -9,8 +9,6 @@
 # USE THIS ONLY FOR PLASMOIDS!!!
 #
 
-TRANS_DIR="translations" #relative path to folder containing mo-files.
-
 #if a language is passed as argument
 #TODO: check if its a correct one.
 REQUESTED_LANG=""
@@ -23,12 +21,12 @@ fi
 ########################
 
 #Plasmoid .pot files MUST be named like X-KDE-PluginInfo-Name!
-NAME=$(grep "X-KDE-PluginInfo-Name" ../../metadata.desktop | sed 's/.*=//')
-VERSION=$(grep "X-KDE-PluginInfo-Version" ../../metadata.desktop | sed 's/.*=//')
-AUTHOR=$(grep "X-KDE-PluginInfo-Author" ../../metadata.desktop | sed 's/.*=//')
-EMAIL=$(grep "X-KDE-PluginInfo-Email" ../../metadata.desktop | sed 's/.*=//')
+NAME=$(grep "X-KDE-PluginInfo-Name" ../metadata.desktop | sed 's/.*=//')
+VERSION=$(grep "X-KDE-PluginInfo-Version" ../metadata.desktop | sed 's/.*=//')
+AUTHOR=$(grep "X-KDE-PluginInfo-Author" ../metadata.desktop | sed 's/.*=//')
+EMAIL=$(grep "X-KDE-PluginInfo-Email" ../metadata.desktop | sed 's/.*=//')
 
-API=$(grep "X-Plasma-API" ../../metadata.desktop | sed 's/.*=//')
+API=$(grep "X-Plasma-API" ../metadata.desktop | sed 's/.*=//')
 case "$API" in
   "python") SCRIPTEXT="py" ;;
   "ruby-script") SCRIPTEXT="rb" ;;
@@ -42,7 +40,7 @@ esac
 ### EXTRACTING TEXT ###
 #######################
 
-POT="$TRANS_DIR/$NAME.pot"
+POT="plasma_applet_$NAME.pot"
 YEAR=$(date +'%Y')
 
 XGETTEXT="xgettext --from-code=UTF-8 -kde -ci18n -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 \
@@ -51,11 +49,11 @@ XGETTEXT="xgettext --from-code=UTF-8 -kde -ci18n -ki18n:1 -ki18nc:1c,2 -ki18np:1
           -ki18ncp -ki18np"
 EXTRACTRC="./extractrc"
 
-$EXTRACTRC ../ui/*.ui ../config/*.xml > ./rc.$SCRIPTEXT
+$EXTRACTRC ../package/contents/ui/*.ui ../package/contents/config/*.xml > ./rc.$SCRIPTEXT
 echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ./rc.$SCRIPTEXT
 echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ./rc.$SCRIPTEXT
 
-$XGETTEXT ../*/*.qml rc.$SCRIPTEXT ../code/*.$SCRIPTEXT -L Java -o "$POT"
+$XGETTEXT ../*/*.qml rc.$SCRIPTEXT ../packacge/contents/code/*.$SCRIPTEXT -L Java -o "$POT"
 sed -e 's/charset=CHARSET/charset=UTF-8/g' -i "$POT"
 sed -e "s/SOME DESCRIPTIVE TITLE./$NAME language translation file./g" -i "$POT"
 sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) $YEAR, $AUTHOR <$EMAIL>/g" -i "$POT"
@@ -64,9 +62,9 @@ sed -e "s/FIRST AUTHOR <EMAIL@ADDRESS>, YEAR./$AUTHOR <$EMAIL>, $YEAR/g" -i "$PO
 sed -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: $VERSION/g" -i "$POT"
 
 #check existing translation files
-if [ "$(find "$TRANS_DIR"/ -type f -name *.po)" ]; then
+if [ "$(find . -type f -name *.po)" ]; then
     #sync available .po files into pot and compile them to mo
-    for d in "$TRANS_DIR"/*.po; do
+    for d in *.po; do
         echo "Merging $d → $POT"
         msgmerge -U "$d" "$POT"
         echo -e "\nCompiling $d → ${d%.po}.mo"
@@ -82,11 +80,11 @@ fi
 
 #if new language is requested, copy it:
 if ! [ -z "$REQUESTED_LANG" ]; then
-    if [ -f  "$TRANS_DIR"/"$NAME"_"$REQUESTED_LANG".po ]; then
-        echo -e '\n' "$NAME"_"$REQUESTED_LANG".po is already created. Please edit it to fit your needs. '\n'
+    if [ -f  plasma_applet_"$NAME"_"$REQUESTED_LANG".po ]; then
+        echo -e '\n' plasma_applet_"$NAME"_"$REQUESTED_LANG".po is already created. Please edit it to fit your needs. '\n'
     else
-        echo Copying "$POT" -> "$TRANS_DIR"/"$NAME"_"$REQUESTED_LANG".po ...
-        cp "$POT" "$TRANS_DIR"/"$NAME"_"$REQUESTED_LANG".po
+        echo Copying "$POT" -> plasma_applet_"$NAME"_"$REQUESTED_LANG".po ...
+        cp "$POT" plasma_applet_"$NAME"_"$REQUESTED_LANG".po
     fi
 fi
 
@@ -96,4 +94,4 @@ fi
 ###############
 
 rm -f rc.$SCRIPTEXT
-find "$TRANS_DIR"/ -type f -name "*.po~" -exec rm {} \;
+find . -type f -name "*.po~" -exec rm {} \;

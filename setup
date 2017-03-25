@@ -7,7 +7,7 @@ function lFiles {
     lText="Copying"
     if [ "$1" == "r" ]; then lText="Removing"; fi
 
-    for file in package/contents/locale/translations/*.mo
+    for file in po/*.mo
         do
         LG=${file:(-5)}
         LG=${LG:0:2}
@@ -38,6 +38,7 @@ case $i in
         lFiles "r"
     ;;
     -g|--global-install)
+	cd package
         cmake CMakeLists.txt && make
         supkg=$(which sudo 2>/dev/null)
         if [ $(id -u) -eq 0 ] || [ $supkg ]; then

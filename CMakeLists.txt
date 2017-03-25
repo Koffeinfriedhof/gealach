@@ -7,16 +7,18 @@ project(plasma-${_CUSTOM_PROJECT_NAME})
 
 SET(_FULL_PROJECT_NAME "${_ORG_DEFINITION}.${_CUSTOM_PROJECT_NAME}")
 
+MESSAGE("Compiling:" ${_FULL_PROJECT_NAME})
+
 find_package(ECM 1.4.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package(KF5Plasma REQUIRED)
 
 #provide translations
-add_subdirectory(package/contents/locale/translations/)
+add_subdirectory(po)
 
 #provide icon
-INSTALL(FILES "package/contents/images/luna-gskbyte14.svg" DESTINATION ${ICON_INSTALL_DIR}/ RENAME "${_FULL_PROJECT_NAME}.svg")
+INSTALL(FILES "contents/images/luna-gskbyte14.svg" DESTINATION ${ICON_INSTALL_DIR}/ RENAME "${_FULL_PROJECT_NAME}.svg")
 
 plasma_install_package(package ${_FULL_PROJECT_NAME})
 

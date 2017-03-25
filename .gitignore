@@ -1,5 +1,5 @@
+.gitignore
 build
-gealach.kdev4
-.kdev4
-.zip
-
+*.kdev4
+*.zip
+*.7z
