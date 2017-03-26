@@ -98,7 +98,6 @@ QtLayouts.ColumnLayout {
         columnSpacing: units.smallSpacing*4
         QtLayouts.Layout.margins: spacing*2
 
-
         PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
         PlasmaComponents.Label { text: phaseNames[0]; color: secondaryFontColor }
         PlasmaComponents.Label { text: formatDate(displayPhase[0]); color: primaryFontColor }
