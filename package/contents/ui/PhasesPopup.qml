@@ -27,8 +27,10 @@ import "../code/lunacalc.js" as LunaCalc
 
 QtLayouts.ColumnLayout {
     id: fullRoot
-    QtLayouts.Layout.minimumWidth: coll.width > btr.width ? coll.width : btr.width
-    QtLayouts.Layout.minimumHeight: wolf.height + coll.height + btr.height + units.smallSpacing * 2
+    anchors.centerIn: parent
+    spacing: units.smallSpacing
+    QtLayouts.Layout.minimumWidth: coll.width > btr.width ? coll.width : btr.width + units.smallSpacing*5
+    QtLayouts.Layout.minimumHeight: wolf.height + coll.height + btr.height + units.smallSpacing * 5
 
     /** PROPERTIES **/
     property var displayPhase: LunaCalc.getTodayPhases()
@@ -90,43 +92,41 @@ QtLayouts.ColumnLayout {
         }
         Component.onCompleted: height=visible ? coll.height*0.75 : 0
     }
-    QtLayouts.RowLayout {
+    QtLayouts.GridLayout {
         id: coll
+        columns: 3
+        columnSpacing: units.smallSpacing*4
+        QtLayouts.Layout.margins: spacing*2
 
-        Column {
-            spacing: units.smallSpacing
-            QtLayouts.Layout.margins: spacing*2
-            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte7.svg"); rotation: hemisphere  ? 0 : 180 }
-            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte14.svg") }
-            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte21.svg"); rotation: hemisphere  ? 0 : 180 }
-            PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
-        }
-        Column {
-            spacing: units.smallSpacing
-            QtLayouts.Layout.margins: spacing*2
-            PlasmaComponents.Label { text: phaseNames[0]; color: secondaryFontColor }
-            PlasmaComponents.Label { text: phaseNames[1]; color: secondaryFontColor }
-            PlasmaComponents.Label { text: phaseNames[2]; color: secondaryFontColor }
-            PlasmaComponents.Label { text: phaseNames[3]; color: secondaryFontColor }
-            PlasmaComponents.Label { text: phaseNames[4]; color: secondaryFontColor }
-        }
-        Column {
-            spacing: units.smallSpacing
-            QtLayouts.Layout.margins: spacing*2
-            PlasmaComponents.Label { text: formatDate(displayPhase[0]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[1]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[2]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[3]); color: primaryFontColor }
-            PlasmaComponents.Label { text: formatDate(displayPhase[4]); color: primaryFontColor }
-        }
+
+        PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
+        PlasmaComponents.Label { text: phaseNames[0]; color: secondaryFontColor }
+        PlasmaComponents.Label { text: formatDate(displayPhase[0]); color: primaryFontColor }
+
+        PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte7.svg"); rotation: hemisphere  ? 0 : 180 }
+        PlasmaComponents.Label { text: phaseNames[1]; color: secondaryFontColor }
+        PlasmaComponents.Label { text: formatDate(displayPhase[1]); color: primaryFontColor }
+
+        PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte14.svg") }
+        PlasmaComponents.Label { text: phaseNames[2]; color: secondaryFontColor }
+        PlasmaComponents.Label { text: formatDate(displayPhase[2]); color: primaryFontColor }
+
+        PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte21.svg"); rotation: hemisphere  ? 0 : 180 }
+        PlasmaComponents.Label { text: phaseNames[3]; color: secondaryFontColor }
+        PlasmaComponents.Label { text: formatDate(displayPhase[3]); color: primaryFontColor }
+
+        PlasmaCore.IconItem { source: plasmoid.file("images", "luna-gskbyte0.svg") }
+        PlasmaComponents.Label { text: phaseNames[4]; color: secondaryFontColor }
+        PlasmaComponents.Label { text: formatDate(displayPhase[4]); color: primaryFontColor }
+
     }
 
     PlasmaComponents.ButtonRow {
         id: btr
 
         spacing: units.smallSpacing*3
-        QtLayouts.Layout.alignment: Qt.AlignHCenter
+        QtLayouts.Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+        QtLayouts.Layout.margins: units.smallSpacing
 
         exclusive: false
 
