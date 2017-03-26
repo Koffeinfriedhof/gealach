@@ -1,5 +1,7 @@
 version 0.1.6 (2017-03-25)
  - changed package structure to fit store.kde.org
+ - Layout fix to fit bigger screens
+ - update Readme.md to provide installation guide
 
 version 0.1.5 (2017-03-23)
  - minor fixes to translations

@@ -10,7 +10,30 @@ On being clicked it presents the important moon phases and shows:
 of current month. Using the arrow-buttons navigates through other months.
 System logic is the one delivered with "Luna II", another Plasma-Port of Luna QML.
 
-* Sources:
+Installation
+---------------------
+after cloning the source use the ./setup - script to install the plasmoid with localisation support.
+Usage:
+-i|--install         :   (local) installation
+-u|--update          :   update (local) installation
+-r|--remove          :   remove (local) installation
+-r -i                :   remove and install (reinstall)
+
+-g|--global-install  :   run cmake,make and make install
+
+Manual Installation
+---------------------
+Local Installation: `plasmapkg2 -i package`
+If you need translations: copy the apropriate .mo file to
+`$USER/.local/share/locale/$LANG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo`
+
+Global Installation:
+`cmake CMakeLists.txt`
+`make`
+`sudo make install`
+
+Sources:
+--------
 * Plasma 5 Port: Luna II
 *   https://github.com/wwjjbb/Luna-II
 *   https://store.kde.org/p/1165459/
