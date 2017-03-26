@@ -18,7 +18,7 @@ find_package(KF5Plasma REQUIRED)
 add_subdirectory(po)
 
 #provide icon
-INSTALL(FILES "contents/images/luna-gskbyte14.svg" DESTINATION ${ICON_INSTALL_DIR}/ RENAME "${_FULL_PROJECT_NAME}.svg")
+INSTALL(FILES "package/contents/images/luna-gskbyte14.svg" DESTINATION ${ICON_INSTALL_DIR}/ RENAME "${_FULL_PROJECT_NAME}.svg")
 
 plasma_install_package(package ${_FULL_PROJECT_NAME})
 
