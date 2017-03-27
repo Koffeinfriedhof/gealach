@@ -3,3 +3,4 @@ build
 *.kdev4
 *.zip
 *.7z
+.directory
