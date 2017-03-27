@@ -16,7 +16,7 @@ function lFiles {
             mkdir -p ~/.local/share/locale/$LG/LC_MESSAGES/
             cp $file ~/.local/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
         else
-            rm ~/.local/usr/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
+            rm ~/.local/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
         fi
     done
 }
