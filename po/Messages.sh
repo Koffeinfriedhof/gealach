@@ -9,6 +9,9 @@
 # USE THIS ONLY FOR PLASMOIDS!!!
 #
 
+#current path
+myPath=$(find -name Messages.sh); myPath=${myPath%%\/Messages.sh};
+
 #if a language is passed as argument
 #TODO: check if its a correct one.
 REQUESTED_LANG=""
@@ -21,12 +24,12 @@ fi
 ########################
 
 #Plasmoid .pot files MUST be named like X-KDE-PluginInfo-Name!
-NAME=$(grep "X-KDE-PluginInfo-Name" ../package/metadata.desktop | sed 's/.*=//')
-VERSION=$(grep "X-KDE-PluginInfo-Version" ../package/metadata.desktop | sed 's/.*=//')
-AUTHOR=$(grep "X-KDE-PluginInfo-Author" ../package/metadata.desktop | sed 's/.*=//')
-EMAIL=$(grep "X-KDE-PluginInfo-Email" ../package/metadata.desktop | sed 's/.*=//')
+NAME=$(grep "X-KDE-PluginInfo-Name" $myPath/../package/metadata.desktop | sed 's/.*=//')
+VERSION=$(grep "X-KDE-PluginInfo-Version" $myPath/../package/metadata.desktop | sed 's/.*=//')
+AUTHOR=$(grep "X-KDE-PluginInfo-Author" $myPath/../package/metadata.desktop | sed 's/.*=//')
+EMAIL=$(grep "X-KDE-PluginInfo-Email" $myPath/../package/metadata.desktop | sed 's/.*=//')
 
-API=$(grep "X-Plasma-API" ../package/metadata.desktop | sed 's/.*=//')
+API=$(grep "X-Plasma-API" $myPath/../package/metadata.desktop | sed 's/.*=//')
 case "$API" in
   "python") SCRIPTEXT="py" ;;
   "ruby-script") SCRIPTEXT="rb" ;;
@@ -40,7 +43,7 @@ esac
 ### EXTRACTING TEXT ###
 #######################
 
-POT="plasma_applet_$NAME.pot"
+POT=$myPath/"plasma_applet_$NAME.pot"
 YEAR=$(date +'%Y')
 
 XGETTEXT="xgettext --from-code=UTF-8 -kde -ci18n -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 \
@@ -49,11 +52,11 @@ XGETTEXT="xgettext --from-code=UTF-8 -kde -ci18n -ki18n:1 -ki18nc:1c,2 -ki18np:1
           -ki18ncp -ki18np"
 EXTRACTRC="./extractrc"
 
-$EXTRACTRC ../package/contents/ui/*.ui ../package/contents/config/*.xml > ./rc.$SCRIPTEXT
-echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ./rc.$SCRIPTEXT
-echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ./rc.$SCRIPTEXT
+$EXTRACTRC $myPath/../package/contents/ui/*.ui $myPath/../package/contents/config/*.xml > $myPath/rc.$SCRIPTEXT
+echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> $myPath/rc.$SCRIPTEXT
+echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> $myPath/rc.$SCRIPTEXT
 
-dateiliste=$(for file in $(find ../ -name *.qml -o -name *.js); do echo $file; done)
+dateiliste=$(find $myPath/../ -name *.qml -o -name *.js)
 echo DATLIST=$dateiliste
 #$XGETTEXT ../package/*/*.qml rc.$SCRIPTEXT ../package/contents/code/*.$SCRIPTEXT -L Java -o "$POT"
 $XGETTEXT $dateiliste -L Java -o "$POT" 
@@ -65,9 +68,9 @@ sed -e "s/FIRST AUTHOR <EMAIL@ADDRESS>, YEAR./$AUTHOR <$EMAIL>, $YEAR/g" -i "$PO
 sed -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: $VERSION/g" -i "$POT"
 echo ding
 #check existing translation files
-if [ "$( find . -type f -name '*.po' )" ]; then
+if [ "$( find $myPath/ -type f -name '*.po' )" ]; then
     #sync available .po files into pot and compile them to mo
-    for d in *.po; do
+    for d in $myPath/*.po; do
         echo "Merging $d → $POT"
         msgmerge -U "$d" "$POT"
         echo -e "\nCompiling $d → ${d%.po}.mo"
@@ -83,11 +86,11 @@ fi
 
 #if new language is requested, copy it:
 if ! [ -z "$REQUESTED_LANG" ]; then
-    if [ -f  plasma_applet_"$NAME"_"$REQUESTED_LANG".po ]; then
+    if [ -f  $myPath/plasma_applet_"$NAME"_"$REQUESTED_LANG".po ]; then
         echo -e '\n' plasma_applet_"$NAME"_"$REQUESTED_LANG".po is already created. Please edit it to fit your needs. '\n'
     else
         echo Copying "$POT" -> plasma_applet_"$NAME"_"$REQUESTED_LANG".po ...
-        cp "$POT" plasma_applet_"$NAME"_"$REQUESTED_LANG".po
+        cp "$POT" $myPath/plasma_applet_"$NAME"_"$REQUESTED_LANG".po
     fi
 fi
 
@@ -96,5 +99,5 @@ fi
 ### CLEANUP ###
 ###############
 
-rm -f rc.$SCRIPTEXT
-find . -type f -name "*.po~" -exec rm {} \;
+rm -f $myPath/rc.$SCRIPTEXT
+find $myPath/ -type f -name "*.po~" -exec rm {} \;
