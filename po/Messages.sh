@@ -21,12 +21,12 @@ fi
 ########################
 
 #Plasmoid .pot files MUST be named like X-KDE-PluginInfo-Name!
-NAME=$(grep "X-KDE-PluginInfo-Name" ../metadata.desktop | sed 's/.*=//')
-VERSION=$(grep "X-KDE-PluginInfo-Version" ../metadata.desktop | sed 's/.*=//')
-AUTHOR=$(grep "X-KDE-PluginInfo-Author" ../metadata.desktop | sed 's/.*=//')
-EMAIL=$(grep "X-KDE-PluginInfo-Email" ../metadata.desktop | sed 's/.*=//')
+NAME=$(grep "X-KDE-PluginInfo-Name" ../package/metadata.desktop | sed 's/.*=//')
+VERSION=$(grep "X-KDE-PluginInfo-Version" ../package/metadata.desktop | sed 's/.*=//')
+AUTHOR=$(grep "X-KDE-PluginInfo-Author" ../package/metadata.desktop | sed 's/.*=//')
+EMAIL=$(grep "X-KDE-PluginInfo-Email" ../package/metadata.desktop | sed 's/.*=//')
 
-API=$(grep "X-Plasma-API" ../metadata.desktop | sed 's/.*=//')
+API=$(grep "X-Plasma-API" ../package/metadata.desktop | sed 's/.*=//')
 case "$API" in
   "python") SCRIPTEXT="py" ;;
   "ruby-script") SCRIPTEXT="rb" ;;
@@ -53,16 +53,19 @@ $EXTRACTRC ../package/contents/ui/*.ui ../package/contents/config/*.xml > ./rc.$
 echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ./rc.$SCRIPTEXT
 echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ./rc.$SCRIPTEXT
 
-$XGETTEXT ../*/*.qml rc.$SCRIPTEXT ../packacge/contents/code/*.$SCRIPTEXT -L Java -o "$POT"
+dateiliste=$(for file in $(find ../ -name *.qml -o -name *.js); do echo $file; done)
+echo DATLIST=$dateiliste
+#$XGETTEXT ../package/*/*.qml rc.$SCRIPTEXT ../package/contents/code/*.$SCRIPTEXT -L Java -o "$POT"
+$XGETTEXT $dateiliste -L Java -o "$POT" 
 sed -e 's/charset=CHARSET/charset=UTF-8/g' -i "$POT"
 sed -e "s/SOME DESCRIPTIVE TITLE./$NAME language translation file./g" -i "$POT"
 sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) $YEAR, $AUTHOR <$EMAIL>/g" -i "$POT"
 sed -e "s/This file is distributed under the same license as the PACKAGE package./This file is distributed under the same license as the $NAME package./g" -i "$POT"
 sed -e "s/FIRST AUTHOR <EMAIL@ADDRESS>, YEAR./$AUTHOR <$EMAIL>, $YEAR/g" -i "$POT"
 sed -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: $VERSION/g" -i "$POT"
-
+echo ding
 #check existing translation files
-if [ "$(find . -type f -name *.po)" ]; then
+if [ "$( find . -type f -name '*.po' )" ]; then
     #sync available .po files into pot and compile them to mo
     for d in *.po; do
         echo "Merging $d → $POT"
