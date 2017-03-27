@@ -13,8 +13,8 @@ function lFiles {
         LG=${LG:0:2}
         echo "$lText language file for $LG"
         if ! [ "$1" == "r" ]; then
-            mkdir -p ~/.local/usr/share/locale/$LG/LC_MESSAGES/
-            cp $file ~/.local/usr/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
+            mkdir -p ~/.local/share/locale/$LG/LC_MESSAGES/
+            cp $file ~/.local/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
         else
             rm ~/.local/usr/share/locale/$LG/LC_MESSAGES/plasma_applet_org.koffeinfriedhof.gealach.mo
         fi
