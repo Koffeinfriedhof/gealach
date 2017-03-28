@@ -147,7 +147,7 @@ function getCurrentPhase() // this function assumes that today is between phases
 	else if (daysFromFirstQuarter < 0) {
 		var daysFromLastNew = Math.floor((today - phases[0].getTime()) / oneDay);
 		if (daysFromLastNew == 0)
-			return {number: 0, text: i18n("New Moon")};
+            return {number: 0, text: i18n("New Moon"), subText: i18n("Today is New Moon")};
 		else if (daysFromLastNew == 1)
 			return {number: 1, text: i18n("Waxing Crescent"), subText: i18n("Yesterday was New Moon")};
 		else // assume that today >= last new moon
@@ -162,7 +162,7 @@ function getCurrentPhase() // this function assumes that today is between phases
 	else if (daysFromThirdQuarter > 0) {
 		var daysToNextNew = -Math.floor((today - phases[4].getTime()) / oneDay);
 		if (daysToNextNew == 0)
-			return {number: 0, text: i18n("New Moon")};
+            return {number: 0, text: i18n("New Moon"), subText: i18n("Today is New Moon")};
 		else if (daysToNextNew == 1)
 			return {number: 27, text: i18n("Waning Crescent"), subText: i18n("Tomorrow is New Moon")};
 		else // assume that today <= next new moon
@@ -173,7 +173,7 @@ function getCurrentPhase() // this function assumes that today is between phases
 	// in all other cases, calculate day from or until full moon
 	var daysFromFullMoon = Math.floor((today - phases[2].getTime()) / oneDay);
 	if (daysFromFullMoon == 0)
-		return {number: 14, text: i18n("Full Moon")};
+        return {number: 14, text: i18n("Full Moon"), subText: i18n("Today is Full Moon")};
 	else if (daysFromFullMoon == -1)
 		return {number: 13, text: i18n("Waxing Gibbous"), subText: i18n("Tomorrow is Full Moon")};
 	else if (daysFromFullMoon < -1)

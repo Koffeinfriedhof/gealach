@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-27 20:21+0200\n"
+"POT-Creation-Date: 2017-03-28 18:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,6 +197,11 @@ msgstr ""
 msgid "Show Button Text"
 msgstr ""
 
+#: po/../package/contents/code/lunacalc.js:150
+#: po/../package/contents/code/lunacalc.js:165
+msgid "Today is New Moon"
+msgstr ""
+
 #: po/../package/contents/code/lunacalc.js:152
 #: po/../package/contents/code/lunacalc.js:154
 msgid "Waxing Crescent"
@@ -226,6 +231,10 @@ msgid "%1 day to New Moon"
 msgid_plural "%1 days to New Moon"
 msgstr[0] ""
 msgstr[1] ""
+
+#: po/../package/contents/code/lunacalc.js:176
+msgid "Today is Full Moon"
+msgstr ""
 
 #: po/../package/contents/code/lunacalc.js:178
 #: po/../package/contents/code/lunacalc.js:180
