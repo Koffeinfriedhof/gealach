@@ -38,7 +38,6 @@ case $i in
         lFiles "r"
     ;;
     -g|--global-install)
-	cd package
         cmake CMakeLists.txt && make
         supkg=$(which sudo 2>/dev/null)
         if [ $(id -u) -eq 0 ] || [ $supkg ]; then
