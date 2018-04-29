@@ -99,7 +99,7 @@ msgstr "Expresiones disponibles: "
 #. i18n: Button Text of prev|current|next moon phase
 #: ../package/contents/ui/cfgPopup.qml:113
 msgid "Show Button Text"
-msgstr "Mostrar el botón del texto"
+msgstr "Mostrar el texto en los botones"
 
 #. i18n: Names of Moon Phases:
 #: ../package/contents/ui/main.qml:53
