@@ -206,3 +206,54 @@ msgstr "Colores"
 #: ../package/contents/config/config.qml:39
 msgid "Credits"
 msgstr "Créditos"
+
+#, fuzzy
+#~ msgid "Today is New Moon"
+#~ msgstr "Hoy es luna nueva"
+
+#~ msgid "Waxing Crescent"
+#~ msgstr "Cuarto creciente"
+
+#~ msgid "Yesterday was New Moon"
+#~ msgstr "La luna nueva fue ayer"
+
+#~ msgid "%1 day since New Moon"
+#~ msgid_plural "%1 days since New Moon"
+#~ msgstr[0] "%1 día desde la pasada luna nueva"
+#~ msgstr[1] "%1 días desde la pasada luna nueva"
+
+#~ msgid "Waning Crescent"
+#~ msgstr "Cuarto menguante"
+
+#~ msgid "Tomorrow is New Moon"
+#~ msgstr "Mañana es luna nueva"
+
+#~ msgid "%1 day to New Moon"
+#~ msgid_plural "%1 days to New Moon"
+#~ msgstr[0] "%1 día para la luna nueva"
+#~ msgstr[1] "%1 días para la luna nueva"
+
+#~ msgid "Today is Full Moon"
+#~ msgstr "Hoy es luna llena"
+
+#~ msgid "Waxing Gibbous"
+#~ msgstr "Cuarto creciente"
+
+#~ msgid "Tomorrow is Full Moon"
+#~ msgstr "Mañana es luna nueva"
+
+#~ msgid "%1 day to Full Moon"
+#~ msgid_plural "%1 days to Full Moon"
+#~ msgstr[0] "%1 día para la luna llena"
+#~ msgstr[1] "%1 días para la luna llena"
+
+#~ msgid "Waning Gibbous"
+#~ msgstr "Cuarto menguante"
+
+#~ msgid "Yesterday was Full Moon"
+#~ msgstr "Ayer fue luna llena"
+
+#~ msgid "%1 day since Full Moon"
+#~ msgid_plural "%1 days since Full Moon"
+#~ msgstr[0] "%1 día desde la pasada luna llena"
+#~ msgstr[1] "%1 días desde la pasada luna llena"
