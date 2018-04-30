@@ -1,14 +1,14 @@
 # org.koffeinfriedhof.gealach language translation file.
-# Copyright (C) 2017, koffeinfriedhof <koffeinfriedhof@gmail.com>
+# Copyright (C) 2018, koffeinfriedhof <koffeinfriedhof@gmail.com>
 # This file is distributed under the same license as the org.koffeinfriedhof.gealach package.
-# koffeinfriedhof <koffeinfriedhof@gmail.com>, 2017
+# koffeinfriedhof <koffeinfriedhof@gmail.com>, 2018
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 18:44+0200\n"
+"POT-Creation-Date: 2018-04-30 14:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,136 +16,172 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: po/../po/rc.js:1
+#: ../po/rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: po/../po/rc.js:2
+#: ../po/rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: po/../package/contents/ui/cfgIcon.qml:34
-msgid "Choose Hemisphere"
-msgstr ""
-
-#: po/../package/contents/ui/cfgIcon.qml:41
-msgid "Northern"
-msgstr ""
-
-#: po/../package/contents/ui/cfgIcon.qml:46
-msgid "Southern"
-msgstr ""
-
-#. i18n: the plasmoid icon seen on the desktop or in panel
-#: po/../package/contents/ui/cfgIcon.qml:54
-msgid "Icon Update Interval"
-msgstr ""
-
-#: po/../package/contents/ui/cfgIcon.qml:61
-msgid " minutes"
-msgstr ""
-
-#. i18n: the plasmoid icon seen on the desktop or in panel
-#: po/../package/contents/ui/cfgIcon.qml:68
-msgid "Show Icon Background"
-msgstr ""
-
-#. i18n: Names of Moon Phases:
-#: po/../package/contents/ui/main.qml:53
-#: po/../package/contents/code/lunacalc.js:150
-#: po/../package/contents/code/lunacalc.js:165
-msgid "New Moon"
-msgstr ""
-
-#: po/../package/contents/ui/main.qml:53
-#: po/../package/contents/code/lunacalc.js:146
-msgid "First Quarter"
-msgstr ""
-
-#: po/../package/contents/ui/main.qml:53
-#: po/../package/contents/code/lunacalc.js:176
-msgid "Full Moon"
-msgstr ""
-
-#: po/../package/contents/ui/main.qml:53
-#: po/../package/contents/code/lunacalc.js:161
-msgid "Last Quarter"
-msgstr ""
-
-#: po/../package/contents/ui/main.qml:53
-msgid "Next New Moon"
-msgstr ""
-
 #. i18n: Last/previous phase of the moon
-#: po/../package/contents/ui/PhasesPopup.qml:51
+#: ../package/contents/ui/PhasesPopup.qml:51
 msgid "Prev"
 msgstr ""
 
-#: po/../package/contents/ui/PhasesPopup.qml:54
+#: ../package/contents/ui/PhasesPopup.qml:54
 msgid "Show previous moon phase. (Key:Left)"
 msgstr ""
 
 #. i18n: Next phase of the moon
-#: po/../package/contents/ui/PhasesPopup.qml:59
+#: ../package/contents/ui/PhasesPopup.qml:59
 msgid "Next"
 msgstr ""
 
-#: po/../package/contents/ui/PhasesPopup.qml:62
+#: ../package/contents/ui/PhasesPopup.qml:62
 msgid "Show next moon phase. (Key:Right)"
 msgstr ""
 
 #. i18n: current phase of the moon
-#: po/../package/contents/ui/PhasesPopup.qml:67
+#: ../package/contents/ui/PhasesPopup.qml:67
 msgid "Current Phase"
 msgstr ""
 
-#: po/../package/contents/ui/PhasesPopup.qml:70
+#: ../package/contents/ui/PhasesPopup.qml:70
 msgid "Show current phases. (Key:Up)"
 msgstr ""
 
 #. i18n: shouting title on full-moon!
-#: po/../package/contents/ui/PhasesPopup.qml:84
+#: ../package/contents/ui/PhasesPopup.qml:84
 msgid "TODAY IS FULL-MOON!"
 msgstr ""
 
+#: ../package/contents/ui/cfgPopup.qml:37
+msgid "Choose Date Format"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:47
+msgid "Text Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:48
+msgid "ISO Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:49
+msgid "Short Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:50
+msgid "Long Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:51
+msgid "Custom Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:62
+msgid "Custom Date Format: "
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:65
+msgid "Preview: "
+msgstr ""
+
+#. i18n: Expressions for custom date format
+#: ../package/contents/ui/cfgPopup.qml:76
+msgid "Available expressions:"
+msgstr ""
+
+#. i18n: Button Text of prev|current|next moon phase
+#: ../package/contents/ui/cfgPopup.qml:113
+msgid "Show Button Text"
+msgstr ""
+
+#. i18n: Names of Moon Phases:
+#: ../package/contents/ui/main.qml:53
+msgid "New Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:53
+msgid "First Quarter"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:53
+msgid "Full Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:53
+msgid "Last Quarter"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:53
+msgid "Next New Moon"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:34
+msgid "Choose Hemisphere"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:41
+msgid "Northern"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:46
+msgid "Southern"
+msgstr ""
+
+#. i18n: the plasmoid icon seen on the desktop or in panel
+#: ../package/contents/ui/cfgIcon.qml:54
+msgid "Icon Update Interval"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:61
+msgid " minutes"
+msgstr ""
+
+#. i18n: the plasmoid icon seen on the desktop or in panel
+#: ../package/contents/ui/cfgIcon.qml:68
+msgid "Show Icon Background"
+msgstr ""
+
 #. i18n: Please choose color, e.g. Primary Font Color
-#: po/../package/contents/ui/cfgColors.qml:38
+#: ../package/contents/ui/cfgColors.qml:38
 msgid "Please choose %1"
 msgstr ""
 
-#: po/../package/contents/ui/cfgColors.qml:48
-#: po/../package/contents/ui/cfgColors.qml:107
+#: ../package/contents/ui/cfgColors.qml:48
+#: ../package/contents/ui/cfgColors.qml:107
 msgid "Primary Font Color"
 msgstr ""
 
-#: po/../package/contents/ui/cfgColors.qml:65
-#: po/../package/contents/ui/cfgColors.qml:111
+#: ../package/contents/ui/cfgColors.qml:65
+#: ../package/contents/ui/cfgColors.qml:111
 msgid "Secondary Font Color"
 msgstr ""
 
-#: po/../package/contents/ui/cfgColors.qml:81
+#: ../package/contents/ui/cfgColors.qml:81
 msgid "Background Color"
 msgstr ""
 
-#: po/../package/contents/ui/cfgColors.qml:97
+#: ../package/contents/ui/cfgColors.qml:97
 msgid "Preview"
 msgstr ""
 
 #. i18n: button text to load colors of current theme
-#: po/../package/contents/ui/cfgColors.qml:117
+#: ../package/contents/ui/cfgColors.qml:117
 msgid "Set Theme Colors"
 msgstr ""
 
 #. i18n: Button to show/hide explanation if color codes, e.g. "red" or "#FF0000"
-#: po/../package/contents/ui/cfgColors.qml:128
+#: ../package/contents/ui/cfgColors.qml:128
 msgid "Show/Hide Explanation"
 msgstr ""
 
-#: po/../package/contents/ui/cfgColors.qml:145
+#: ../package/contents/ui/cfgColors.qml:145
 msgid ""
 "Quote from <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QML Colors</a>: "
 "You may enter a color by a SVG color name, such as \"red\", \"green\" or "
@@ -155,129 +191,18 @@ msgid ""
 "\"#800000FF\"."
 msgstr ""
 
-#: po/../package/contents/ui/cfgPopup.qml:37
-msgid "Choose Date Format"
-msgstr ""
-
-#: po/../package/contents/ui/cfgPopup.qml:47
-msgid "Text Date"
-msgstr ""
-
-#: po/../package/contents/ui/cfgPopup.qml:48
-msgid "ISO Date"
-msgstr ""
-
-#: po/../package/contents/ui/cfgPopup.qml:49
-msgid "Short Date"
-msgstr ""
-
-#: po/../package/contents/ui/cfgPopup.qml:50
-msgid "Long Date"
-msgstr ""
-
-#: po/../package/contents/ui/cfgPopup.qml:51
-msgid "Custom Date"
-msgstr ""
-
-#: po/../package/contents/ui/cfgPopup.qml:62
-msgid "Custom Date Format: "
-msgstr ""
-
-#: po/../package/contents/ui/cfgPopup.qml:65
-msgid "Preview: "
-msgstr ""
-
-#. i18n: Expressions for custom date format
-#: po/../package/contents/ui/cfgPopup.qml:76
-msgid "Available expressions:"
-msgstr ""
-
-#. i18n: Button Text of prev|current|next moon phase
-#: po/../package/contents/ui/cfgPopup.qml:113
-msgid "Show Button Text"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:150
-#: po/../package/contents/code/lunacalc.js:165
-msgid "Today is New Moon"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:152
-#: po/../package/contents/code/lunacalc.js:154
-msgid "Waxing Crescent"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:152
-msgid "Yesterday was New Moon"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:155
-msgid "%1 day since New Moon"
-msgid_plural "%1 days since New Moon"
-msgstr[0] ""
-msgstr[1] ""
-
-#: po/../package/contents/code/lunacalc.js:167
-#: po/../package/contents/code/lunacalc.js:169
-msgid "Waning Crescent"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:167
-msgid "Tomorrow is New Moon"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:170
-msgid "%1 day to New Moon"
-msgid_plural "%1 days to New Moon"
-msgstr[0] ""
-msgstr[1] ""
-
-#: po/../package/contents/code/lunacalc.js:176
-msgid "Today is Full Moon"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:178
-#: po/../package/contents/code/lunacalc.js:180
-msgid "Waxing Gibbous"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:178
-msgid "Tomorrow is Full Moon"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:181
-msgid "%1 day to Full Moon"
-msgid_plural "%1 days to Full Moon"
-msgstr[0] ""
-msgstr[1] ""
-
-#: po/../package/contents/code/lunacalc.js:183
-#: po/../package/contents/code/lunacalc.js:185
-msgid "Waning Gibbous"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:183
-msgid "Yesterday was Full Moon"
-msgstr ""
-
-#: po/../package/contents/code/lunacalc.js:186
-msgid "%1 day since Full Moon"
-msgid_plural "%1 days since Full Moon"
-msgstr[0] ""
-msgstr[1] ""
-
-#: po/../package/contents/config/config.qml:24
+#: ../package/contents/config/config.qml:24
 msgid "Icon"
 msgstr ""
 
-#: po/../package/contents/config/config.qml:29
+#: ../package/contents/config/config.qml:29
 msgid "Popup"
 msgstr ""
 
-#: po/../package/contents/config/config.qml:34
+#: ../package/contents/config/config.qml:34
 msgid "Colors"
 msgstr ""
 
-#: po/../package/contents/config/config.qml:39
+#: ../package/contents/config/config.qml:39
 msgid "Credits"
 msgstr ""

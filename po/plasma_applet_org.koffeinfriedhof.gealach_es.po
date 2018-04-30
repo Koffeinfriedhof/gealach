@@ -1,186 +1,185 @@
-# gealach language translation file.
-# Copyright (C) 2017, koffeinfriedhof <koffeinfriedhof@gmail.com>
-# This file is distributed under the same license as the gealach package.
-# koffeinfriedhof <koffeinfriedhof@gmail.com>, 2017
+# org.koffeinfriedhof.gealach language translation file.
+# Copyright (C) 2018, koffeinfriedhof <koffeinfriedhof@gmail.com>
+# This file is distributed under the same license as the org.koffeinfriedhof.gealach package.
+# koffeinfriedhof <koffeinfriedhof@gmail.com>, 2018
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1.3\n"
+"Project-Id-Version: 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-29 11:37+0200\n"
-"PO-Revision-Date: 2017-03-19 19:34+0100\n"
-"Last-Translator: koffeinfriedhof <koffeinfriedhof@gmail.com>\n"
-"Language-Team: French <kde-i18n-fr@kde.org>\n"
-"Language: fr_FR\n"
+"POT-Creation-Date: 2018-04-29 11:53+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <victorhck@opensuse.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: ../po/rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "koffeinfriedhof"
+msgstr "Victorhck"
 
 #: ../po/rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "koffeinfriedhof@gmail.com"
+msgstr "Victorhck@opensuse.org"
 
 #. i18n: Last/previous phase of the moon
 #: ../package/contents/ui/PhasesPopup.qml:51
 msgid "Prev"
-msgstr "Précédent"
+msgstr "Previo"
 
 #: ../package/contents/ui/PhasesPopup.qml:54
 msgid "Show previous moon phase. (Key:Left)"
-msgstr "Montre Lune précédente (Touche: gauche)"
+msgstr "Muestra la fase previa de la luna. (Tecla: Izquierda)"
 
 #. i18n: Next phase of the moon
 #: ../package/contents/ui/PhasesPopup.qml:59
 msgid "Next"
-msgstr "Suivant"
+msgstr "Próximo"
 
 #: ../package/contents/ui/PhasesPopup.qml:62
 msgid "Show next moon phase. (Key:Right)"
-msgstr "Montre Lune suivante (Touche: droite)"
+msgstr "Muestra la próxima fase de la luna. (Tecla: Derecha)"
 
 #. i18n: current phase of the moon
 #: ../package/contents/ui/PhasesPopup.qml:67
 msgid "Current Phase"
-msgstr "Actuel"
+msgstr "Fase actual"
 
 #: ../package/contents/ui/PhasesPopup.qml:70
 msgid "Show current phases. (Key:Up)"
-msgstr "Montre lune actuel (Touche: haut)"
+msgstr "Muestra las fases actuales. (Tecla: Arriba)"
 
 #. i18n: shouting title on full-moon!
 #: ../package/contents/ui/PhasesPopup.qml:84
 msgid "TODAY IS FULL-MOON!"
-msgstr "AUJOURD'HUI EST PLEINE LUNE!"
+msgstr "¡HOY ES LUNA LLENA!"
 
 #: ../package/contents/ui/cfgPopup.qml:37
 msgid "Choose Date Format"
-msgstr "Format des dates"
+msgstr "Escoger el formato de la fecha"
 
 #: ../package/contents/ui/cfgPopup.qml:47
 msgid "Text Date"
-msgstr "Date textuelle"
+msgstr "Fecha en texto"
 
 #: ../package/contents/ui/cfgPopup.qml:48
 msgid "ISO Date"
-msgstr "Date de l'ISO 8601"
+msgstr "Fecha en formato ISO"
 
 #: ../package/contents/ui/cfgPopup.qml:49
 msgid "Short Date"
-msgstr "Date courte"
+msgstr "Fecha corta"
 
 #: ../package/contents/ui/cfgPopup.qml:50
 msgid "Long Date"
-msgstr "Date longue"
+msgstr "Fecha larga"
 
 #: ../package/contents/ui/cfgPopup.qml:51
 msgid "Custom Date"
-msgstr "Personalisé"
+msgstr "Fecha personalizada"
 
 #: ../package/contents/ui/cfgPopup.qml:62
 msgid "Custom Date Format: "
-msgstr "Date personalisé"
+msgstr "Personalizar el formato de la fecha: "
 
 #: ../package/contents/ui/cfgPopup.qml:65
 msgid "Preview: "
-msgstr "Prévisualisation: "
+msgstr "Vista previa: "
 
 #. i18n: Expressions for custom date format
 #: ../package/contents/ui/cfgPopup.qml:76
 msgid "Available expressions:"
-msgstr "Expressions disponibles:"
+msgstr "Expresiones disponibles: "
 
 #. i18n: Button Text of prev|current|next moon phase
 #: ../package/contents/ui/cfgPopup.qml:113
 msgid "Show Button Text"
-msgstr "Afficher le texte de bouton"
+msgstr "Mostrar el texto en los botones"
 
 #. i18n: Names of Moon Phases:
 #: ../package/contents/ui/main.qml:53
 msgid "New Moon"
-msgstr "Nouvelle Lune"
+msgstr "Luna nueva"
 
 #: ../package/contents/ui/main.qml:53
 msgid "First Quarter"
-msgstr "Premier quartier"
+msgstr "Cuarto creciente"
 
 #: ../package/contents/ui/main.qml:53
 msgid "Full Moon"
-msgstr "Pleine Lune"
+msgstr "Luna llena"
 
 #: ../package/contents/ui/main.qml:53
 msgid "Last Quarter"
-msgstr "Dernier quartier"
+msgstr "Cuarto menguante"
 
 #: ../package/contents/ui/main.qml:53
 msgid "Next New Moon"
-msgstr "Nouvelle Lune suivante"
+msgstr "Próxima luna nueva"
 
 #: ../package/contents/ui/cfgIcon.qml:34
 msgid "Choose Hemisphere"
-msgstr "Montrer dans l'hémisphère"
+msgstr "Escoger hemisferio"
 
 #: ../package/contents/ui/cfgIcon.qml:41
 msgid "Northern"
-msgstr "Hémisphère nord"
+msgstr "Norte"
 
 #: ../package/contents/ui/cfgIcon.qml:46
 msgid "Southern"
-msgstr "Hémisphère sud"
+msgstr "Sur"
 
 #. i18n: the plasmoid icon seen on the desktop or in panel
 #: ../package/contents/ui/cfgIcon.qml:54
 msgid "Icon Update Interval"
-msgstr "Intervalle de mise à jour d'icône"
+msgstr "Intervalo de actualización del icono"
 
 #: ../package/contents/ui/cfgIcon.qml:61
 msgid " minutes"
-msgstr " minutes"
+msgstr " minutos"
 
 #. i18n: the plasmoid icon seen on the desktop or in panel
 #: ../package/contents/ui/cfgIcon.qml:68
 msgid "Show Icon Background"
-msgstr "Montrer arrière-plan d'icône"
+msgstr "Mostrar el botón del fondo"
 
 #. i18n: Please choose color, e.g. Primary Font Color
 #: ../package/contents/ui/cfgColors.qml:38
 msgid "Please choose %1"
-msgstr "Choisissez la couleur %1"
+msgstr "Por favor escoja %1"
 
 #: ../package/contents/ui/cfgColors.qml:48
 #: ../package/contents/ui/cfgColors.qml:107
 msgid "Primary Font Color"
-msgstr "de police primaire"
+msgstr "Color de la fuente principal"
 
 #: ../package/contents/ui/cfgColors.qml:65
 #: ../package/contents/ui/cfgColors.qml:111
 msgid "Secondary Font Color"
-msgstr "de police secondaire"
+msgstr "Color de la fuente secundaria"
 
 #: ../package/contents/ui/cfgColors.qml:81
 msgid "Background Color"
-msgstr "d'arrière-plan"
+msgstr "Color del fondo"
 
 #: ../package/contents/ui/cfgColors.qml:97
 msgid "Preview"
-msgstr "Prévisualisation"
+msgstr "Vista previa"
 
 #. i18n: button text to load colors of current theme
 #: ../package/contents/ui/cfgColors.qml:117
 msgid "Set Theme Colors"
-msgstr "Couleurs à thème"
+msgstr "Ajustar el tema del color"
 
 #. i18n: Button to show/hide explanation if color codes, e.g. "red" or "#FF0000"
 #: ../package/contents/ui/cfgColors.qml:128
 msgid "Show/Hide Explanation"
-msgstr "Afficher / Masquer Explication"
+msgstr "Mostrar/ocultar explicación"
 
 #: ../package/contents/ui/cfgColors.qml:145
 msgid ""
@@ -191,76 +190,70 @@ msgid ""
 "a triplet of \"#FF0000\" and a slightly transparent blue to a quad of "
 "\"#800000FF\"."
 msgstr ""
-"Citation de <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QMLColors</a>: "
-"Vous pouvez saisir une couleur par un nom de couleur SVG, tel que \"red\", "
-"\"green\" ou \"lightsteelblue\" ou par un triplet ou quadhexadécimal sous la "
-"forme #RRGGBB ou AARRGGBB respectivement. Parexemple, la couleur rouge "
-"correspond à un triplet de \"#FF0000\" etun bleu légèrement transparent à un "
-"quad de \"#800000FF\"."
 
 #: ../package/contents/config/config.qml:24
 msgid "Icon"
-msgstr "Icône"
+msgstr "Icono"
 
 #: ../package/contents/config/config.qml:29
 msgid "Popup"
-msgstr "Contextuelle"
+msgstr "Ventana emergente"
 
 #: ../package/contents/config/config.qml:34
 msgid "Colors"
-msgstr "Couleurs"
+msgstr "Colores"
 
 #: ../package/contents/config/config.qml:39
 msgid "Credits"
-msgstr "About"
+msgstr "Créditos"
 
 #, fuzzy
 #~ msgid "Today is New Moon"
-#~ msgstr "La nouvelle Lune est aujourd'hui"
+#~ msgstr "Hoy es luna nueva"
 
 #~ msgid "Waxing Crescent"
-#~ msgstr "Premier croissant"
+#~ msgstr "Cuarto creciente"
 
 #~ msgid "Yesterday was New Moon"
-#~ msgstr "La nouvelle Lune était hier"
+#~ msgstr "La luna nueva fue ayer"
 
 #~ msgid "%1 day since New Moon"
 #~ msgid_plural "%1 days since New Moon"
-#~ msgstr[0] "%1 jour depuis la nouvelle Lune"
-#~ msgstr[1] "%1 jours depuis la nouvelle Lune"
+#~ msgstr[0] "%1 día desde la pasada luna nueva"
+#~ msgstr[1] "%1 días desde la pasada luna nueva"
 
 #~ msgid "Waning Crescent"
-#~ msgstr "Dernier croissant"
+#~ msgstr "Cuarto menguante"
 
 #~ msgid "Tomorrow is New Moon"
-#~ msgstr "La nouvelle Lune est demain"
+#~ msgstr "Mañana es luna nueva"
 
 #~ msgid "%1 day to New Moon"
 #~ msgid_plural "%1 days to New Moon"
-#~ msgstr[0] "%1 jour avant la nouvelle Lune"
-#~ msgstr[1] "%1 jours avant la nouvelle Lune"
+#~ msgstr[0] "%1 día para la luna nueva"
+#~ msgstr[1] "%1 días para la luna nueva"
 
 #~ msgid "Today is Full Moon"
-#~ msgstr "La pleine Lune est aujourd'hui"
+#~ msgstr "Hoy es luna llena"
 
 #~ msgid "Waxing Gibbous"
-#~ msgstr "Lune gibbeuse croissante"
+#~ msgstr "Cuarto creciente"
 
 #~ msgid "Tomorrow is Full Moon"
-#~ msgstr "La pleine Lune est demain"
+#~ msgstr "Mañana es luna nueva"
 
 #~ msgid "%1 day to Full Moon"
 #~ msgid_plural "%1 days to Full Moon"
-#~ msgstr[0] "%1 jour avant la pleine Lune"
-#~ msgstr[1] "%1 jours avant la pleine Lune"
+#~ msgstr[0] "%1 día para la luna llena"
+#~ msgstr[1] "%1 días para la luna llena"
 
 #~ msgid "Waning Gibbous"
-#~ msgstr "Lune gibbeuse décroissante"
+#~ msgstr "Cuarto menguante"
 
 #~ msgid "Yesterday was Full Moon"
-#~ msgstr "La pleine Lune était hier"
+#~ msgstr "Ayer fue luna llena"
 
 #~ msgid "%1 day since Full Moon"
 #~ msgid_plural "%1 days since Full Moon"
-#~ msgstr[0] "%1 jour depuis la pleine Lune"
-#~ msgstr[1] "%1 jours depuis la pleine Lune"
+#~ msgstr[0] "%1 día desde la pasada luna llena"
+#~ msgstr[1] "%1 días desde la pasada luna llena"
