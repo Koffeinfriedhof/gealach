@@ -26,8 +26,72 @@ import org.kde.plasma.plasmoid 2.0
 import "../code/phases.js" as Phases
 import "../code/lunacalc.js" as LunaCalc
 
+
 Item {
     id: root
+    //** outsourcing function as a workaround for bug#3 (https://github.com/Koffeinfriedhof/gealach/issues/3)**//
+    function getCurrentPhase() // this function assumes that today is between phases[0] (last new moon) and phases[4] (next new moon)
+    {
+        var oneDay = 86400000; //1000 * 60 * 60 * 24;
+        var today = new Date().getTime();
+        var phases = LunaCalc.getTodayPhases();
+
+        // set time for all phases to 00:00:00 in order to obtain the correct phase for today (these changes should be local)
+        for (var i = 0; i < 5; i++) {
+            phases[i].setHours(0);
+            phases[i].setMinutes(0);
+            phases[i].setSeconds(0);
+        }
+
+        // if today <= first quarter, calculate day since last new moon
+        var daysFromFirstQuarter = Math.floor((today - phases[1].getTime()) / oneDay);
+        if (daysFromFirstQuarter == 0)
+            return {number: 7, text: i18n("First Quarter")};
+        else if (daysFromFirstQuarter < 0) {
+            var daysFromLastNew = Math.floor((today - phases[0].getTime()) / oneDay);
+            if (daysFromLastNew == 0)
+                return {number: 0, text: i18n("New Moon"), subText: i18n("Today is New Moon")};
+            else if (daysFromLastNew == 1)
+                return {number: 1, text: i18n("Waxing Crescent"), subText: i18n("Yesterday was New Moon")};
+            else // assume that today >= last new moon
+                return {number: daysFromLastNew, text: i18n("Waxing Crescent"),
+                    subText: i18np("%1 day since New Moon", "%1 days since New Moon", daysFromLastNew)};
+        }
+
+        // if today >= third quarter, calculate day until next new moon
+        var daysFromThirdQuarter = Math.floor((today - phases[3].getTime()) / oneDay);
+        if (daysFromThirdQuarter == 0)
+            return {number: 21, text: i18n("Last Quarter")};
+        else if (daysFromThirdQuarter > 0) {
+            var daysToNextNew = -Math.floor((today - phases[4].getTime()) / oneDay);
+            if (daysToNextNew == 0)
+                return {number: 0, text: i18n("New Moon"), subText: i18n("Today is New Moon")};
+            else if (daysToNextNew == 1)
+                return {number: 27, text: i18n("Waning Crescent"), subText: i18n("Tomorrow is New Moon")};
+            else // assume that today <= next new moon
+                return {number: 28 - daysToNextNew, text: i18n("Waning Crescent"),
+                    subText: i18np("%1 day to New Moon", "%1 days to New Moon", daysToNextNew)};
+        }
+
+        // in all other cases, calculate day from or until full moon
+        var daysFromFullMoon = Math.floor((today - phases[2].getTime()) / oneDay);
+        if (daysFromFullMoon == 0)
+            return {number: 14, text: i18n("Full Moon"), subText: i18n("Today is Full Moon")};
+        else if (daysFromFullMoon == -1)
+            return {number: 13, text: i18n("Waxing Gibbous"), subText: i18n("Tomorrow is Full Moon")};
+        else if (daysFromFullMoon < -1)
+            return {number: 14 + daysFromFullMoon, text: i18n("Waxing Gibbous"),
+                subText: i18np("%1 day to Full Moon", "%1 days to Full Moon", -daysFromFullMoon)};
+                else if (daysFromFullMoon == 1)
+                    return {number: 15, text: i18n("Waning Gibbous"), subText: i18n("Yesterday was Full Moon")};
+                else if (daysFromFullMoon > 1)
+                    return {number: 14 + daysFromFullMoon, text: i18n("Waning Gibbous"),
+                        subText: i18np("%1 day since Full Moon", "%1 days since Full Moon", daysFromFullMoon)};
+
+                        // this should never happen:
+                        console.log("We cannot count :-(");
+                        return {number: -1, text: ""};
+    }
 
     /** CONFIGURATION **/
     //ICON
@@ -47,14 +111,14 @@ Item {
 
     /** PROPERTIES **/
     property var phases: LunaCalc.reloadPhases()
-    property var currentPhase: LunaCalc.getCurrentPhase()
+    property var currentPhase: getCurrentPhase()
     property var phaseNames:{
         // i18n: Names of Moon Phases:
         0:i18n("New Moon"), 1:i18n("First Quarter"), 2:i18n("Full Moon"), 3:i18n("Last Quarter"), 4:i18n("Next New Moon")}
 
     /** FUNCTIONS **/
     function update() {
-        currentPhase=LunaCalc.getCurrentPhase()
+        currentPhase=getCurrentPhase()
         phases=LunaCalc.reloadPhases()
     }
 

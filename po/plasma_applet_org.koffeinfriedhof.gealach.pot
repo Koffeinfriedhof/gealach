@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 14:32+0200\n"
+"POT-Creation-Date: 2018-05-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: ../po/rc.js:1
 msgctxt "NAME OF TRANSLATORS"
@@ -25,6 +26,118 @@ msgstr ""
 #: ../po/rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:34
+msgid "Choose Hemisphere"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:41
+msgid "Northern"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:46
+msgid "Southern"
+msgstr ""
+
+#. i18n: the plasmoid icon seen on the desktop or in panel
+#: ../package/contents/ui/cfgIcon.qml:54
+msgid "Icon Update Interval"
+msgstr ""
+
+#: ../package/contents/ui/cfgIcon.qml:61
+msgid " minutes"
+msgstr ""
+
+#. i18n: the plasmoid icon seen on the desktop or in panel
+#: ../package/contents/ui/cfgIcon.qml:68
+msgid "Show Icon Background"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:49 ../package/contents/ui/main.qml:117
+msgid "First Quarter"
+msgstr ""
+
+#. i18n: Names of Moon Phases:
+#: ../package/contents/ui/main.qml:53 ../package/contents/ui/main.qml:68
+#: ../package/contents/ui/main.qml:117
+msgid "New Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:53 ../package/contents/ui/main.qml:68
+msgid "Today is New Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:55 ../package/contents/ui/main.qml:57
+msgid "Waxing Crescent"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:55
+msgid "Yesterday was New Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:58
+msgid "%1 day since New Moon"
+msgid_plural "%1 days since New Moon"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../package/contents/ui/main.qml:64 ../package/contents/ui/main.qml:117
+msgid "Last Quarter"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:70 ../package/contents/ui/main.qml:72
+msgid "Waning Crescent"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:70
+msgid "Tomorrow is New Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:73
+msgid "%1 day to New Moon"
+msgid_plural "%1 days to New Moon"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../package/contents/ui/main.qml:79 ../package/contents/ui/main.qml:117
+msgid "Full Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:79
+msgid "Today is Full Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:81 ../package/contents/ui/main.qml:83
+msgid "Waxing Gibbous"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:81
+msgid "Tomorrow is Full Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:84
+msgid "%1 day to Full Moon"
+msgid_plural "%1 days to Full Moon"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../package/contents/ui/main.qml:86 ../package/contents/ui/main.qml:88
+msgid "Waning Gibbous"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:86
+msgid "Yesterday was Full Moon"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:89
+msgid "%1 day since Full Moon"
+msgid_plural "%1 days since Full Moon"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../package/contents/ui/main.qml:117
+msgid "Next New Moon"
 msgstr ""
 
 #. i18n: Last/previous phase of the moon
@@ -57,95 +170,6 @@ msgstr ""
 #. i18n: shouting title on full-moon!
 #: ../package/contents/ui/PhasesPopup.qml:84
 msgid "TODAY IS FULL-MOON!"
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:37
-msgid "Choose Date Format"
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:47
-msgid "Text Date"
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:48
-msgid "ISO Date"
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:49
-msgid "Short Date"
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:50
-msgid "Long Date"
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:51
-msgid "Custom Date"
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:62
-msgid "Custom Date Format: "
-msgstr ""
-
-#: ../package/contents/ui/cfgPopup.qml:65
-msgid "Preview: "
-msgstr ""
-
-#. i18n: Expressions for custom date format
-#: ../package/contents/ui/cfgPopup.qml:76
-msgid "Available expressions:"
-msgstr ""
-
-#. i18n: Button Text of prev|current|next moon phase
-#: ../package/contents/ui/cfgPopup.qml:113
-msgid "Show Button Text"
-msgstr ""
-
-#. i18n: Names of Moon Phases:
-#: ../package/contents/ui/main.qml:53
-msgid "New Moon"
-msgstr ""
-
-#: ../package/contents/ui/main.qml:53
-msgid "First Quarter"
-msgstr ""
-
-#: ../package/contents/ui/main.qml:53
-msgid "Full Moon"
-msgstr ""
-
-#: ../package/contents/ui/main.qml:53
-msgid "Last Quarter"
-msgstr ""
-
-#: ../package/contents/ui/main.qml:53
-msgid "Next New Moon"
-msgstr ""
-
-#: ../package/contents/ui/cfgIcon.qml:34
-msgid "Choose Hemisphere"
-msgstr ""
-
-#: ../package/contents/ui/cfgIcon.qml:41
-msgid "Northern"
-msgstr ""
-
-#: ../package/contents/ui/cfgIcon.qml:46
-msgid "Southern"
-msgstr ""
-
-#. i18n: the plasmoid icon seen on the desktop or in panel
-#: ../package/contents/ui/cfgIcon.qml:54
-msgid "Icon Update Interval"
-msgstr ""
-
-#: ../package/contents/ui/cfgIcon.qml:61
-msgid " minutes"
-msgstr ""
-
-#. i18n: the plasmoid icon seen on the desktop or in panel
-#: ../package/contents/ui/cfgIcon.qml:68
-msgid "Show Icon Background"
 msgstr ""
 
 #. i18n: Please choose color, e.g. Primary Font Color
@@ -189,6 +213,48 @@ msgid ""
 "\" and \"#AARRGGBB\" respectively. For example, the color red corresponds to "
 "a triplet of \"#FF0000\" and a slightly transparent blue to a quad of "
 "\"#800000FF\"."
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:37
+msgid "Choose Date Format"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:47
+msgid "Text Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:48
+msgid "ISO Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:49
+msgid "Short Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:50
+msgid "Long Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:51
+msgid "Custom Date"
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:62
+msgid "Custom Date Format: "
+msgstr ""
+
+#: ../package/contents/ui/cfgPopup.qml:65
+msgid "Preview: "
+msgstr ""
+
+#. i18n: Expressions for custom date format
+#: ../package/contents/ui/cfgPopup.qml:76
+msgid "Available expressions:"
+msgstr ""
+
+#. i18n: Button Text of prev|current|next moon phase
+#: ../package/contents/ui/cfgPopup.qml:113
+msgid "Show Button Text"
 msgstr ""
 
 #: ../package/contents/config/config.qml:24
