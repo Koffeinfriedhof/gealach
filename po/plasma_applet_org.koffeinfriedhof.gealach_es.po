@@ -1,21 +1,23 @@
 # org.koffeinfriedhof.gealach language translation file.
 # Copyright (C) 2018, koffeinfriedhof <koffeinfriedhof@gmail.com>
 # This file is distributed under the same license as the org.koffeinfriedhof.gealach package.
-# koffeinfriedhof <koffeinfriedhof@gmail.com>, 2018
 #
-#, fuzzy
+# koffeinfriedhof <koffeinfriedhof@gmail.com>, 2018.
+# victorhck <victorhck@mailbox.org>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-13 13:31+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <victorhck@opensuse.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-10-06 21:47+0100\n"
+"Last-Translator: victorhck <victorhck@mailbox.org>\n"
+"Language-Team: Spanish <>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: ../po/rc.js:1
 msgctxt "NAME OF TRANSLATORS"
@@ -214,6 +216,16 @@ msgid ""
 "a triplet of \"#FF0000\" and a slightly transparent blue to a quad of "
 "\"#800000FF\"."
 msgstr ""
+"Cita de la web <a href=\"http://doc.qt.io/qt-5/qml-color.html\">QML Colors</a"
+">: "
+"Puede introducir un color por su nombre de color SVG, como \"red\", \"green\""
+" o "
+"\"lightsteelblue\" o por tres o cuatro pares de números hexadecimales en el"
+" siguiente formato \"#RRGGBB"
+"\" and \"#AARRGGBB\" respectively. For example, the color red corresponds to "
+"de tres pares o \"#FF0000\" en cuatro pares por ejemplo un azul ligeramente"
+" transparente sería "
+"\"#800000FF\" en formato de cuatro pares de cifras."
 
 #: ../package/contents/ui/cfgPopup.qml:37
 msgid "Choose Date Format"
@@ -272,3 +284,4 @@ msgstr "Colores"
 #: ../package/contents/config/config.qml:39
 msgid "Credits"
 msgstr "Créditos"
+
